@@ -11,6 +11,7 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
 - se videor
 - logga in, logga ut, registrera
 - lägga upp egna tutorials
+- gilla/spara tutorials
 - bläddra bland content
 
 
