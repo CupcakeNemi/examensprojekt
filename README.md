@@ -7,7 +7,7 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
 - JS
 - önskan är att använda react så jag lär mig mer om det
 
-- Database: mysql
+- Database: mongoDB
 
 # Kravspecifikation: I punktform skriv ner funktionaliterer som ska vara implementerade inom 6 veckor
 - En användare ska kunna 
