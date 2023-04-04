@@ -7,12 +7,20 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
 - JS
 - önskan är att använda react så jag lär mig mer om det
 
+- Database: mysql
+
 # Kravspecifikation: I punktform skriv ner funktionaliterer som ska vara implementerade inom 6 veckor
-- se videor
-- logga in, logga ut, registrera
-- lägga upp egna tutorials
-- gilla/spara tutorials
-- bläddra bland content
+- En användare ska kunna 
+    - Logga in
+    - logga ut
+    - lägga upp egna tutorials
+    - gilla/spara tutorials
+    - bläddra bland content
+    - se videor
+
+- En gäst ska kunna
+    - Registrera sig
+    - bläddra bland content
 
 
 # Samarbeten: Om ni ska göra detta i grupp eller tillsammans med ett företag skriv det här och hur ni har tänkt samarbeta
