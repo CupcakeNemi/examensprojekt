@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/CupcakeNemi/examensprojekt/issues"
   },
-  "homepage": "https://github.com/CupcakeNemi/examensprojekt#readme"
+  "homepage": "https://github.com/CupcakeNemi/examensprojekt#readme",
+  "dependencies": {
+    "mongodb": "^5.2.0"
+  }
 }

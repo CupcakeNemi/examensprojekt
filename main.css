@@ -21,3 +21,10 @@
 
 @import '/sass/themes/theme';
 @import '/sass/themes/admin';
+
+#header-img{
+    width: 500px;
+}
+.content-img{
+    width: 300px;
+}
