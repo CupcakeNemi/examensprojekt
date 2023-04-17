@@ -25,3 +25,9 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
 
 # Samarbeten: Om ni ska göra detta i grupp eller tillsammans med ett företag skriv det här och hur ni har tänkt samarbeta
  - Nope.
+
+
+
+ # Installationer 
+ - npm init
+ - npx create-react-app virkalirka
