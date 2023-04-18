@@ -1,0 +1,5 @@
+## Måndag 17/4-23
+Jag började med att sätta upp html och css, försökte med sass men det fungerade inte så gjorde bara vanlig css för nu. Försökte med att fixa MongoDB men listade inte ut hur.
+
+## Tisdag 18/4-23
+Dagen började segt men tillslut så kollade jag igenom ett gammalt case och började sätta upp mongoDB databas och cluster, det tog lite tid för fick lite errors som var lite sega att reda ut men tillslut lyckades jag och satte upp en .env fil.
