@@ -33,3 +33,4 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npx create-react-app virkalirka
  - npm i mongodb
  - npm i env
+ - npm i express mongoose

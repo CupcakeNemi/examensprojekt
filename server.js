@@ -1,30 +1,31 @@
-let msg = "hello world";
-console.log(msg);
 
-const { MongoClient } = require('mongodb');
-// or as an es module:
-// import { MongoClient } from 'mongodb'
+const express = require('express');
+const mongoose = require('mongoose');
 
-// Connection URL
-const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
+// Connect to MongoDB database
+mongoose.connect("mongodb+srv://Nemi:6ecLJry7ISbsEixC@virkalirka.ddqwf5f.mongodb.net/?retryWrites=true&w=majority", {
+useNewUrlParser: true,
+useUnifiedTopology: true
+}).then(() => {
+console.log('Connected to MongoDB database');
+}).catch((err) => {
+console.error('Error connecting to MongoDB database', err);
+});
 
-// Database Name
-const dbName = 'myProject';
+// Create Express app
+const app = express();
 
-async function main() {
-  // Use connect method to connect to the server
-await client.connect();
-console.log('Connected successfully to server');
-const db = client.db(dbName);
-const collection = db.collection('documents');
+// Define routes
+app.get('/', (req, res) => {
+res.send('Hello World!');
+});
 
-  // the following code examples can be pasted here...
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    });
 
-return 'done.';
-}
 
-main()
-.then(console.log)
-.catch(console.error)
-.finally(() => client.close());
+// Start server
+app.listen(3000, () => {
+console.log('Server started on port 3000');
+});
