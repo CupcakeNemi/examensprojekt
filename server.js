@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-const tutorialRoutes = require('./routes/tutorial');
+const tutorialRoutes = require('./backend/routes/tutorial');
 // const { userSchema } = require('./models/userSchema');
 
 // Connect to MongoDB database
