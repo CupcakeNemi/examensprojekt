@@ -1,3 +1,4 @@
+# Vecka 16
 ## Måndag 17/4-23
 Jag började med att sätta upp html och css, försökte med sass men det fungerade inte så gjorde bara vanlig css för nu. Försökte med att fixa MongoDB men listade inte ut hur.
 
@@ -9,3 +10,8 @@ Jag har kopplat appen till databasen. Fixat Sassen och gjort loginsidans css och
 
 ## Torsdag 20/4-23
 Fortsatt med anslutningen och env filen
+
+## Fredag 21/4-23 
+*inget internet*
+
+# Vecka 17
