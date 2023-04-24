@@ -1,4 +1,5 @@
-import Schema from 'validate';
+const mongoose = require ('mongoose');
+const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     username: {
@@ -17,4 +18,4 @@ const userSchema = new Schema({
     }
 })
 
-export {userSchema};
+module.exports = mongoose.model('User', userSchema);

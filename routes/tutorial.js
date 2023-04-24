@@ -1,24 +1,16 @@
 const express = require('express');
+const {createTutorial, getTutorials, getTutorial, deleteTutorial, updateTutorial} = require('../controllers/tutorialController');
+
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.json({mssg: 'GET all tutorials'})
-});
+router.get('/', getTutorials);
 
-router.get('/:id', (req, res) => {
-    res.json({mssg: 'GET a single tutorial'});
-})
+router.get('/:id', getTutorial);
 
-router.post('/', (req, res) => {
-    res.json({mssg: 'POST new tutorial'})
-})
+router.post('/', createTutorial);
 
-router.delete('/:id', (req, res) => {
-    res.json({mssg: 'DELETE tutorial'})
-})
+router.delete('/:id', deleteTutorial);
 
-router.patch('/:id', (req, res) => {
-    res.json({mssg: 'UPDATE tutorial'})
-})
+router.patch('/:id', updateTutorial);
 
 module.exports = router; 

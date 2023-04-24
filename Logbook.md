@@ -15,3 +15,6 @@ Fortsatt med anslutningen och env filen
 *inget internet*
 
 # Vecka 17
+## Måndag 24/4-23
+Hade problem med databasen i början, lyckades lösa. 
+Gjort tutorialSchema, gjort controllers
