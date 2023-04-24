@@ -6,3 +6,6 @@ Dagen började segt men tillslut så kollade jag igenom ett gammalt case och bö
 
 ## Onsdag 19/4-23
 Jag har kopplat appen till databasen. Fixat Sassen och gjort loginsidans css och börjat med sidebaren. 
+
+## Torsdag 20/4-23
+Fortsatt med anslutningen och env filen
