@@ -18,3 +18,6 @@ Fortsatt med anslutningen och env filen
 ## Måndag 24/4-23
 Hade problem med databasen i början, lyckades lösa. 
 Gjort tutorialSchema, gjort controllers, startade med react
+
+## Tisdag 25/4-23
+Fortsatt med react
