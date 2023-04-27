@@ -1,0 +1,13 @@
+#sitename
+SITE_NAME= virkalirka
+
+#port
+PORT= 4000
+
+#MongoDB 
+MONGODB_URI= ""
+MONGODB_NAME= ""
+
+#Session
+SESSION_SECRET=
+SESSION_MAXAGE=60000
