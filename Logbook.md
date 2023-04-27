@@ -20,4 +20,4 @@ Hade problem med databasen i början, lyckades lösa.
 Gjort tutorialSchema, gjort controllers, startade med react
 
 ## Tisdag 25/4-23
-Fortsatt med react
+Fortsatt med react.

@@ -26,6 +26,7 @@ const getTutorial = async (req, res) => {
 // ny tutorial
 const createTutorial = async (req, res) => {
     const {title, stepsTitle, steps} = req.body;
+
     try{
         const tutorial = await Tutorial.create({title, stepsTitle, steps});
         res.status(200).json(tutorial);
