@@ -37,6 +37,9 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npm i express mongoose
  - npm i react-router-dom
  - npm i bcrypt
+ - npm i validator
+ - npm i jsonwebtoken
 
-
- - npm install på root + virkalirka mappen
+## För att starta appen
+ Skriv npm install på både rot nivå och i virkalirka appen, starta sedan båda 
+ (root är backend, virkalirka är frontend)
