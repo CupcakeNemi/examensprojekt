@@ -29,3 +29,7 @@ försökte med authentication men misslyckades
 ## Tisdag 02/05-23
 Lyckades fixa ett fel jag hade, tog hjälp av chatgpt men såg ingen skillnad på koden som jag fick och koden som jag hade, men det löste sig...
 Fortsatte med autentisering
+
+## Onsdag 03/05-23
+gjort klart autentiseringen, försökt fixa med sass och fonts, gick sådär. 
+påbörjat att kunna ladda upp bilder

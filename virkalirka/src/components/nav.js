@@ -17,7 +17,7 @@ const Nav = () => {
             </div>
             <div className="navContainer">
                 <Link to="/">
-                    <h1>VirkaLirka Nav</h1>
+                    <p>Home</p>
                 </Link>
                 <nav>
                     {user && (

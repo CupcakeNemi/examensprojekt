@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Julius+Sans+One&display=swap');
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+
 
 import Home from './pages/home';
 import Login from './pages/login';

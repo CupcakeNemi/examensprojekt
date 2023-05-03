@@ -1,5 +1,7 @@
 import {useTutorialContext} from '../hooks/useTutorialContext';
 
+const contentImg = 'public/user/contentImg/'+user._id
+
 const TutorialDetails = ({tutorial}) => {
     const {dispatch} = useTutorialContext();
     const handleClick = async () => {
