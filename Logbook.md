@@ -33,3 +33,6 @@ Fortsatte med autentisering
 ## Onsdag 03/05-23
 gjort klart autentiseringen, försökt fixa med sass och fonts, gick sådär. 
 påbörjat att kunna ladda upp bilder
+
+## Torsdag 04/05-23
+Gjort massa sass idag
