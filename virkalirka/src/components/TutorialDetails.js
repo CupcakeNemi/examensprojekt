@@ -17,7 +17,7 @@ const TutorialDetails = ({tutorial}) => {
 
     return(
         <div className="tutorialDetails">
-            <h2>{tutorial.title}<span onClick={handleClick} class="delBtn"><i class="fa-solid fa-trash-can fa-lg"></i></span></h2>
+            <h2>{tutorial.title}<i onClick={handleClick} id="delBtn" class=" fa-solid fa-trash-can "></i></h2>
             
             <h3>{tutorial.stepsTitle}</h3>
             <p>{tutorial.steps}</p>

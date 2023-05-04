@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Julius+Sans+One&display=swap');
 body{
-    font-family: 'Inter', sans-serif;
+    font-family: $inter;
     color: $font-color;
     
 }
 
 h1{
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: $julius;
 }
 
 h2{
+    font-family: $julius;
     font-weight: $semiBold;
     font-size: 24px;
     margin-left: 24px;
+
 }
 h3{
     font-weight: $medium;
