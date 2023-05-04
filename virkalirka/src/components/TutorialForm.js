@@ -43,21 +43,25 @@ const TutorialForm = () => {
                 type="text" 
                 onChange={(e) => setTitle(e.target.value)} 
                 value={title} 
-                placeholder="Title" />
+                placeholder="Title" 
+                className="formInput"
+                />
 
             <input 
                 type="text" 
                 onChange={(e) => setStepsTitle(e.target.value)} 
                 value={stepsTitle} 
-                placeholder="Step title" />
+                placeholder="Step title" 
+                className="formInput"/>
 
             <input 
                 type="text" 
                 onChange={(e) => setSteps(e.target.value)} 
                 value={steps} 
-                placeholder="Steps" />
+                placeholder="Steps" 
+                className="formInput"/>
 
-            <button>Add Tutorial</button>
+            <button className="btn">Add Tutorial</button>
             {error && <div className="error">{error}</div>}
 
         </form>

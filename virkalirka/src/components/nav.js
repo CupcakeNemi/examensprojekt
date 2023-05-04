@@ -17,17 +17,17 @@ const Nav = () => {
             </div>
             <div className="navContainer">
                 <Link to="/">
-                    <p>Home</p>
+                    <p className="navPages">Home</p>
                 </Link>
                 <nav>
                     {user && (
                         <div>
-                            <span>{user.username}</span>
-                            <button onClick={handleClick}>Log out</button>
+                            <span id="user">{user.username}</span>
+                            <button onClick={handleClick} id="logoutBtn">Log out</button>
                         </div>
                     )}
                     {!user && (
-                        <div>
+                        <div className="link">
                             <Link to="/login">Login</Link>
                             <Link to="/signup">Signup</Link>
                         </div>

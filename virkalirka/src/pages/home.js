@@ -1,6 +1,6 @@
 import { useEffect} from "react";
 import { useTutorialContext } from "../hooks/useTutorialContext";
-import '../main.css'
+import '../index.css'
 
 import TutorialDetails from "../components/TutorialDetails";
 import TutorialForm from "../components/TutorialForm";

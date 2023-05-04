@@ -1,0 +1,31 @@
+#header-img {
+    width: 500px;
+    border-radius: 0 0 100% 100%;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    top: 170px;
+    left: 170px;
+}
+
+.content-img {
+    width: 300px;
+}
+
+#user{
+    font-family: 'Julius Sans One', sans-serif;
+    position: absolute;
+    top: 25px;
+    z-index: 10;
+    left: 65px;
+    font-weight: 600;
+    font-size: 23px;
+    // background: rgba(188, 187, 187, 0.5);
+
+
+}

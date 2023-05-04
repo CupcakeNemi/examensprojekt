@@ -1,6 +1,6 @@
 import {useTutorialContext} from '../hooks/useTutorialContext';
 
-const contentImg = 'public/user/contentImg/'+user._id
+// const contentImg = 'public/user/contentImg/'+user._id
 
 const TutorialDetails = ({tutorial}) => {
     const {dispatch} = useTutorialContext();
@@ -17,10 +17,11 @@ const TutorialDetails = ({tutorial}) => {
 
     return(
         <div className="tutorialDetails">
-            <h2>{tutorial.title}</h2>
+            <h2>{tutorial.title}<span onClick={handleClick} class="delBtn"><i class="fa-solid fa-trash-can fa-lg"></i></span></h2>
+            
             <h3>{tutorial.stepsTitle}</h3>
             <p>{tutorial.steps}</p>
-            <span onClick={handleClick}>Delete</span>
+            
         </div>
     )
 }

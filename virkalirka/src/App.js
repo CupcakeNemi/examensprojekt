@@ -1,13 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Julius+Sans+One&display=swap');
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+// import React, {useState} from 'react';
 
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Home from './pages/home';
 import Login from './pages/login';
 import Signup from './pages/signup';
 import Nav from './components/Nav';
 
+
+
 function App() {
+
+  // const [pic, setPic] = useState(null);
+  // const handlePic = (e) => {
+  //   setPic(e.target.pics[0]);
+  // }
+  // const handleUpload = async () => {
+  //   if (!file) {
+  //     alert('Select a file');
+  //     return;
+  //   }
+  // }
+  // const formData = new FormData();
+  // formData.append('image', pic);
+
+  // try {
+  //   const response = await fetch('http://localhost:3000/upload', {
+  //     method: 'POST',
+  //     body: formData,
+  //   })
+  // }
+
   return (
     <div className="App">
       <BrowserRouter>

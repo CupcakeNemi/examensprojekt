@@ -1,0 +1,18 @@
+#sidebar {
+    position: fixed;
+    top: 200px;
+    right: -239px; /* set the initial position off-screen */
+    width: 250px;
+    height: 100%;
+    z-index: 10;
+    transition: right 0.5s; /* add a transition effect */
+}
+
+#sidebar-toggle {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}

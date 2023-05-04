@@ -1,13 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Julius+Sans+One&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Inter", sans-serif;
+  color: #1D232E;
+}
+
+h1 {
+  font-family: "Julius Sans One", sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 24px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 24px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 24px;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  top: 460px;
+  left: 230px;
+  color: #5D90EC;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.navPages {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  top: 10px;
+  left: 400px;
+  color: #5D90EC;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+#header-img {
+  width: 500px;
+  border-radius: 0 0 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  top: 170px;
+  left: 170px;
+}
+
+.content-img {
+  width: 300px;
+}
+
+#user {
+  font-family: "Julius Sans One", sans-serif;
+  position: absolute;
+  top: 25px;
+  z-index: 10;
+  left: 65px;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+#sidebar {
+  position: fixed;
+  top: 200px;
+  right: -239px; /* set the initial position off-screen */
+  width: 250px;
+  height: 100%;
+  z-index: 10;
+  transition: right 0.5s; /* add a transition effect */
+}
+
+#sidebar-toggle {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+ul {
+  border-radius: 10px 0 0 10px;
+  padding: 20px 20px 20px 40px;
+  background-color: #FCFF7B;
+}
+
+#email-input {
+  padding-left: 20px;
+  height: 35px;
+  width: 300px;
+  top: 260px;
+  left: 100px;
+}
+
+#pw-input {
+  padding-left: 20px;
+  height: 35px;
+  width: 300px;
+  top: 340px;
+  left: 100px;
+}
+
+.input-login {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #F8FAFD;
+  border-style: none;
+}
+
+.formInput {
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #F8FAFD;
+  border-style: none;
+}
+
+.btn {
+  background-color: #FCFF7B;
+  border-style: none;
+  border-radius: 100px;
+  width: 130px;
+  padding: 10px;
+}
+
+#logoutBtn {
+  position: absolute;
+  top: 65px;
+  z-index: 10;
+  left: 30px;
+  border-radius: 100px;
+  width: 130px;
+  padding: 10px;
+  border-style: none;
+  background-color: #FCFF7B;
+}
+
+.delBtn {
+  border-radius: 100px;
+  padding: 7px;
+  background-color: #FCFF7B;
+  font-size: 8px;
+}
+
+.content-img {
+  width: 300px;
+}
+
+#header-img {
+  width: 40px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header-img {
+  width: 500px;
+  border-radius: 0 0 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  top: 170px;
+  left: 170px;
+}
+
+.input-login {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #F8FAFD;
+  border-style: none;
+}
+
+#email-input {
+  padding-left: 20px;
+  height: 35px;
+  width: 300px;
+  top: 260px;
+  left: 100px;
+}
+
+#pw-input {
+  padding-left: 20px;
+  height: 35px;
+  width: 300px;
+  top: 340px;
+  left: 100px;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  top: 460px;
+  left: 230px;
+  color: #5D90EC;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+ul {
+  border-radius: 10px 0 0 10px;
+  padding: 20px 20px 20px 40px;
+  background-color: #FCFF7B;
+}
+
+#sidebar {
+  position: fixed;
+  top: 200px;
+  right: -239px; /* set the initial position off-screen */
+  width: 250px;
+  height: 100%;
+  z-index: 10;
+  transition: right 0.5s; /* add a transition effect */
+}
+
+#sidebar-toggle {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
 }

@@ -1,0 +1,38 @@
+ul {
+    border-radius: 10px 0 0 10px;
+    padding: 20px 20px 20px 40px;
+    background-color: #FCFF7B;
+}
+
+#email-input {
+    padding-left: 20px;
+    height: 35px;
+    width: 300px;
+    top: 260px;
+    left: 100px;
+}
+
+#pw-input {
+    padding-left: 20px;
+    height: 35px;
+    width: 300px;
+    top: 340px;
+    left: 100px;
+}
+
+.input-login {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: #F8FAFD;
+    border-style: none;
+}
+
+.formInput{
+    padding: 4px;
+    border-radius: 5px;
+    background-color: #F8FAFD;
+    border-style: none;
+}
