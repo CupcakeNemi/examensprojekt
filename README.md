@@ -39,6 +39,8 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npm i bcrypt
  - npm i validator
  - npm i jsonwebtoken
+ - npm i multer
+ - npm i body-parser
 
 ## För att starta appen
  Skriv npm install på både rot nivå och i virkalirka appen, starta sedan båda 

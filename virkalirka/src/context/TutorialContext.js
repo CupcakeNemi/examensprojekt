@@ -20,6 +20,7 @@ export const tutorialsReducer = (state, action) => {
     }
 }
 
+
 export const TutorialContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(tutorialsReducer, {
         tutorials: null

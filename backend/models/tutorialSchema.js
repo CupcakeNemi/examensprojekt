@@ -2,7 +2,7 @@ const mongoose = require ('mongoose');
 const Schema = mongoose.Schema;
 
 const tutorialSchema = new Schema({
-    contentImg: {
+    fileName: {
         type: String,
         required: false
     },
