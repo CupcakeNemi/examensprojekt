@@ -36,3 +36,6 @@ påbörjat att kunna ladda upp bilder
 
 ## Torsdag 04/05-23
 Gjort massa sass idag
+
+## Fredag 05/05-23
+Försökt fixa så det går att ladda upp bilder, dock är en grej undefined som jag inte lyckas lösa
