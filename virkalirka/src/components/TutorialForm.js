@@ -17,13 +17,8 @@ const TutorialForm = () => {
     if (stepsTitle) formData.append('stepsTitle', stepsTitle);
     if (steps) formData.append('steps', steps);
 
-    console.log(file, "här är jag")
-
-
     const handleSubmit = async (e) => {
         e.preventDefault()
-
-        // const tutorial = { file, title, stepsTitle, steps
 
         const response = await fetch('/api/tutorials', {
             method: 'POST',

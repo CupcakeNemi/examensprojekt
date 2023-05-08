@@ -25,12 +25,9 @@ const getTutorial = async (req, res) => {
 
 // ny tutorial
 const createTutorial = async (req, res) => {
-    console.log(req.body, "hej body")
-    console.log(req.file, "hej file")
+
     const { filename} = req.file;
     const {title, stepsTitle, steps} = req.body;
-    
-    console.log(filename, "FILNAMN")
 
     try{
         const tutorial = await Tutorial.create({filename, title, stepsTitle, steps});
