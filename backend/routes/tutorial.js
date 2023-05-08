@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, './public/uploads'); 
+        cb(null, './backend/public/uploads'); 
     },
     filename: (req, file, cb) => {
         cb(null, uuidv4() + file.originalname);
@@ -21,7 +21,7 @@ router.get('/', getTutorials);
 
 router.get('/:id', getTutorial);
 
-router.post('/', upload.single('file'), createTutorial);
+router.post('/', upload.single('filename'), createTutorial);
 
 router.delete('/:id', deleteTutorial);
 

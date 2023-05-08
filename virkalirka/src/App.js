@@ -11,37 +11,6 @@ import Nav from './components/Nav';
 
 function App() {
 
-//   const [pic, setPic] = useState(null);
-
-//   const handlePic = (e) => {
-//     setPic(e.target.pics[0]);
-//   }
-//   const handleUpload = async () => {
-//     if (!pic) {
-//       alert('Select a file');
-//       return;
-//     }
-  
- 
-
-//   try {
-//     const response = await fetch('http://localhost:3000/upload', {
-//       method: 'POST',
-//       body: formData,
-//     })
-  
-
-//   if(response.ok){
-//     alert('Image uploaded');
-//   }else {
-//     alert('Failed to upload image')
-//   }
-// }catch (error){
-//   console.error(error);
-//   alert('Failed to upload the image')
-// }
-// }
-
   return (
     <div className="App">
       <BrowserRouter>

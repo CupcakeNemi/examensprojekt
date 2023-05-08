@@ -12,7 +12,7 @@ const TutorialForm = () => {
     const [error, setError] = useState(null);
 
     const formData = new FormData();
-    if (file) formData.append('file', file);
+    if (file) formData.append('filename', file);
     if (title) formData.append('title', title);
     if (stepsTitle) formData.append('stepsTitle', stepsTitle);
     if (steps) formData.append('steps', steps);
@@ -23,14 +23,12 @@ const TutorialForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const tutorial = { file, title, stepsTitle, steps}
+        // const tutorial = { file, title, stepsTitle, steps
 
         const response = await fetch('/api/tutorials', {
             method: 'POST',
-            body: JSON.stringify(tutorial),
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            body: formData
+            
         })
         const json = await response.json()
 

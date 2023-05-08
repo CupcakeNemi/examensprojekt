@@ -2,9 +2,9 @@ const mongoose = require ('mongoose');
 const Schema = mongoose.Schema;
 
 const tutorialSchema = new Schema({
-    fileName: {
+    filename: {
         type: String,
-        required: false
+        required: true
     },
     title: {
         type: String,

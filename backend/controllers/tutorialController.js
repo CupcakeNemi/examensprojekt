@@ -25,11 +25,15 @@ const getTutorial = async (req, res) => {
 
 // ny tutorial
 const createTutorial = async (req, res) => {
+    console.log(req.body, "hej body")
+    console.log(req.file, "hej file")
+    const { filename} = req.file;
     const {title, stepsTitle, steps} = req.body;
-    const { fileName} = req.file;
+    
+    console.log(filename, "FILNAMN")
 
     try{
-        const tutorial = await Tutorial.create({fileName, title, stepsTitle, steps});
+        const tutorial = await Tutorial.create({filename, title, stepsTitle, steps});
         res.status(200).json(tutorial);
     } catch (error){
         res.status(400).json({error: error.message})
