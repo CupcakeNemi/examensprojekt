@@ -43,7 +43,6 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npm i body-parser
 
  # att göra
- - lösa så när man loggat in så redirectas man
  - lösa så det bara går att deleta ens egna saker
  - lösa så bilderna syns på sidan
  - fixa edit knapp

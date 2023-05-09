@@ -1,14 +1,13 @@
-import { redirect } from 'react-router-dom';
+
 import {useTutorialContext} from '../hooks/useTutorialContext';
+import {useState} from 'react';
 
 
 const TutorialDetails = ({tutorial}) => {
     const {dispatch} = useTutorialContext();
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user'));
     const handleClick = async () => {
-        // const token = localStorage.getItem('authToken');
-        // if (!token){
-        //     return redirect("/login");
-        // }
+
         const response = await fetch('/api/tutorials/' + tutorial._id, {
             method: 'DELETE'
         });
@@ -18,18 +17,18 @@ const TutorialDetails = ({tutorial}) => {
             dispatch({type: 'DELETE_TUTORIAL', payload: json})
         }
     }
-    const image = `http://localhost:4000/static/${tutorial.filename}`
-    console.log(tutorial.filename, "hejehj")
+    const image = `http://localhost:4000/static/${tutorial.filename}`;
+    console.log('isLoggedIn:', isLoggedIn);
+    console.log("local storage auth token",localStorage.getItem('user'));
 
-    
-    
     return(
         
         <div className="tutorialDetails">
-            <img src={image} />
+            <img src={image} alt="Image of the project"/>
             
             <h2>{tutorial.title}
-            <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>
+            {isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>}
+            {/* <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i> */}
             
             </h2>
             <h3>{tutorial.stepsTitle}</h3>
