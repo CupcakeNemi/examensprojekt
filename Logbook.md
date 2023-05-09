@@ -39,3 +39,9 @@ Gjort massa sass idag
 
 ## Fredag 05/05-23
 Försökt fixa så det går att ladda upp bilder, dock är en grej undefined som jag inte lyckas lösa
+
+# Vecka 19
+## Måndag 08/05-23
+Lyckades med att ladda upp bilder 
+
+## Tisdag 09/05-23
