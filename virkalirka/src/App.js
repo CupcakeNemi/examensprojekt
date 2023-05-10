@@ -6,8 +6,10 @@ import Home from './pages/home';
 import Login from './pages/login';
 import Signup from './pages/signup';
 // import createTutorial from './pages/createTutorial';
+
 // import UserPage from './pages/userPage';
 import Nav from './components/nav';
+
 
 
 
@@ -25,6 +27,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
         {/* <Route path='/userPage' element={<UserPage/>}/> */}
+
         {/* <Route path='/createTutorial' element={<createTutorial/>}/> */}
       </Routes>
       </div>

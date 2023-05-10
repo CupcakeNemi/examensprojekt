@@ -1,5 +1,6 @@
 const Tutorial = require('../models/tutorialSchema');
 const mongoose = require('mongoose');
+import {ObjectId} from 'mongodb';
 
 // alla tutorials
 const getTutorials = async(req,res) => {
@@ -28,6 +29,7 @@ const createTutorial = async (req, res) => {
 
     const { filename} = req.file;
     const {title, stepsTitle, steps} = req.body;
+    // const postedBy = ObjectId(req.session.userId);
 
     try{
         const tutorial = await Tutorial.create({filename, title, stepsTitle, steps});
