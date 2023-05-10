@@ -1,6 +1,6 @@
 const Tutorial = require('../models/tutorialSchema');
 const mongoose = require('mongoose');
-import {ObjectId} from 'mongodb';
+const {ObjectId} = require('mongodb'); 
 
 // alla tutorials
 const getTutorials = async(req,res) => {
