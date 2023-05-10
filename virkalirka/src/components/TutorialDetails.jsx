@@ -1,6 +1,7 @@
 
 import {useTutorialContext} from '../hooks/useTutorialContext';
 import {useState} from 'react';
+import { url } from '../backendUrl';
 
 
 const TutorialDetails = ({tutorial}) => {
@@ -19,7 +20,7 @@ const TutorialDetails = ({tutorial}) => {
             dispatch({type: 'DELETE_TUTORIAL', payload: json})
         }
     }
-    const image = `http://143.42.27.207/static/${tutorial.filename}`;
+    const image = `/static/${tutorial.filename}`;
     console.log('isLoggedIn:', isLoggedIn);
     console.log("local storage auth token",localStorage.getItem('user'));
 
