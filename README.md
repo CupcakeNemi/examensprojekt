@@ -41,6 +41,7 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npm i jsonwebtoken
  - npm i multer
  - npm i body-parser
+ - npm i cors
 
  # att göra
  - lösa så det bara går att deleta ens egna saker

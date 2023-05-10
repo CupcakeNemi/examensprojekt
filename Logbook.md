@@ -46,3 +46,6 @@ Lyckades med att ladda upp bilder
 
 ## Tisdag 09/05-23
 Fixade så efter man loggat in så redirectas man till home, tog lite tid innan jag hittade att useHistory hade bytts ut till useNavigate
+
+## Onsdag 10/05-23
+Kämpat som tusan med linode men det är ett error efter det andra, ibland går det bra en stund men sen sitter man fast, så nu sitter jag fast igen, får se om anders kan hjälpa mig imorgon.
