@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from "./useAuthContext";
+import URL from '../backendURL';
 
 export const useLogin = () => {
     const [error, setError] = useState(null);
@@ -12,7 +13,7 @@ export const useLogin = () => {
         setIsLoading(true);
         setError(null);
 
-        const response = await fetch('/api/user/login', {
+        const response = await fetch(`${URL}/api/user/login`, {
             method: 'POST', 
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({username, password})
