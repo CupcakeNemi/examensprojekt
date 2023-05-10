@@ -1,16 +1,19 @@
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import { useTutorialContext } from "../hooks/useTutorialContext";
 import '../index.css'
 
+
 import TutorialDetails from "../components/TutorialDetails";
 import TutorialForm from "../components/TutorialForm";
+import URL from "../backendURL";
 
-const Home = () => {
+const UserPage = () => {
     const {tutorials, dispatch} = useTutorialContext();
+    const [userId, setUserId] = useState(localStorage.getItem('user')?.id);
 
     useEffect(() => {
         const fetchTutorials = async () => {
-            const response = await fetch ('/api/tutorials');
+            const response = await fetch (`${URL}/api/tutorial`);
             const json = await response.json();
 
             if (response.ok) {
@@ -19,16 +22,18 @@ const Home = () => {
         }
         fetchTutorials()
     }, [dispatch])
+    const userTutorials = tutorials.filter(tutorial => tutorial.creator === userId);
     return (
-        <div className="home">
+        <div className="userPage">
             <div className="tutorials">
-                {tutorials && tutorials.map((tutorial => (
+                {userTutorials.map((tutorial => (
                     <TutorialDetails key={tutorial._id} tutorial={tutorial} />
                 )))}
             </div>
             <TutorialForm/>
         </div>
+        
     )
 }
 
-export default Home;
+export default UserPage;

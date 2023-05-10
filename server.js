@@ -5,6 +5,8 @@ const path = require('path');
 const tutorialRoutes = require('./backend/routes/tutorial');
 const userRoutes = require('./backend/routes/user');
 const bodyParser = require('body-parser')
+const cors = require('cors')
+
 
 
 // Connect to MongoDB database
@@ -33,9 +35,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use(cors());
 app.use('/api/tutorials', tutorialRoutes);
 app.use('/api/user', userRoutes);
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'index.html'));
+// });

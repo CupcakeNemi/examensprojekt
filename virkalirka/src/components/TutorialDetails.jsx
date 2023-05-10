@@ -1,6 +1,8 @@
 
 import {useTutorialContext} from '../hooks/useTutorialContext';
 import {useState} from 'react';
+import URL from '../backendURL';
+
 
 
 const TutorialDetails = ({tutorial}) => {
@@ -8,7 +10,7 @@ const TutorialDetails = ({tutorial}) => {
     const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user'));
     const handleClick = async () => {
 
-        const response = await fetch('/api/tutorials/' + tutorial._id, {
+        const response = await fetch(`${URL}/api/tutorials/` + tutorial._id, {
             method: 'DELETE'
         });
         const json = await response.json();
@@ -17,7 +19,7 @@ const TutorialDetails = ({tutorial}) => {
             dispatch({type: 'DELETE_TUTORIAL', payload: json})
         }
     }
-    const image = `http://localhost:4000/static/${tutorial.filename}`;
+    const image = `${URL}/static/${tutorial.filename}`;
     console.log('isLoggedIn:', isLoggedIn);
     console.log("local storage auth token",localStorage.getItem('user'));
 
