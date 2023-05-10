@@ -45,4 +45,5 @@ Försökt fixa så det går att ladda upp bilder, dock är en grej undefined som
 Lyckades med att ladda upp bilder 
 
 ## Tisdag 09/05-23
-Fixade så efter man loggat in så redirectas man till home, tog lite tid innan jag hittade att useHistory hade bytts ut till useNavigate
+Fixade så efter man loggat in så redirectas man till home, tog lite tid innan jag hittade att useHistory hade bytts ut till useNavigate,
+gjort så det reloadas när man loggar ut så att man inte kan deleta saker som utloggad 

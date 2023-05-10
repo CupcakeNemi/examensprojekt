@@ -43,9 +43,13 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npm i body-parser
 
  # att göra
- - lösa så det bara går att deleta ens egna saker
+ - fixa schema postedby
+ - fixa userpage så man bara ser sina egna och DÄR kan man deleta och edita
+ - fixa createtutorial route
+ - lösa så det bara går att deleta ens egna saker 
  - lösa så bilderna syns på sidan
  - fixa edit knapp
+ - 
 
 ## För att starta appen
  Skriv npm install på både rot nivå och i virkalirka appen, starta sedan båda 

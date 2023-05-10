@@ -1,9 +1,11 @@
 import { useEffect} from "react";
+import { Link } from "react-router-dom";
 import { useTutorialContext } from "../hooks/useTutorialContext";
 import '../index.css'
 
 import TutorialDetails from "../components/TutorialDetails";
 import TutorialForm from "../components/TutorialForm";
+
 
 const Home = () => {
     const {tutorials, dispatch} = useTutorialContext();
@@ -26,8 +28,10 @@ const Home = () => {
                     <TutorialDetails key={tutorial._id} tutorial={tutorial} />
                 )))}
             </div>
+            <button><Link to="/createTutorial">Create Tutorial</Link></button>
             <TutorialForm/>
         </div>
+        
     )
 }
 

@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:4000",
+  "proxy": "http://143.42.27.207:4000",
   "name": "virkalirka",
   "version": "0.1.0",
   "private": true,
