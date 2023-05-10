@@ -4,9 +4,8 @@ const mongoose = require('mongoose');
 const path = require('path');
 const tutorialRoutes = require('./backend/routes/tutorial');
 const userRoutes = require('./backend/routes/user');
-const bodyParser = require('body-parser')
-const cors = require('cors')
-
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
 
 // Connect to MongoDB database
@@ -25,7 +24,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // Create Express app
 const app = express();
-app.use(cors());
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/static', express.static('public/uploads'));
