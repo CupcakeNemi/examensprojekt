@@ -8,7 +8,7 @@ import '../index.css'
 
 import TutorialDetails from "../components/TutorialDetails";
 import TutorialForm from "../components/TutorialForm";
-import URL from "../backendUrl";
+import URL from "../backendURL";
 
 
 const Home = () => {

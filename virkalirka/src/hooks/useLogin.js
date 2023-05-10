@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from "./useAuthContext";
-import URL from '../backendUrl';
+import URL from '../backendURL';
 
 export const useLogin = () => {
     const [error, setError] = useState(null);
