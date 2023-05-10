@@ -1,5 +1,5 @@
 import { useState } from "react"
-import URL from "../backendURL";
+import URL from "../backendUrl";
 
 import { useTutorialContext } from "../hooks/useTutorialContext";
 

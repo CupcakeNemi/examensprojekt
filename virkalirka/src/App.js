@@ -8,7 +8,7 @@ import Signup from './pages/signup';
 // import createTutorial from './pages/createTutorial';
 
 // import UserPage from './pages/userPage';
-import Nav from './components/nav';
+import Nav from './components/Nav';
 
 
 

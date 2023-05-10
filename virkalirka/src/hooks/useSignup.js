@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuthContext } from "./useAuthContext";
-import URL from '../backendURL';
+import URL from '../backendUrl';
 
 export const useSignup = () => {
     const [error, setError] = useState(null);

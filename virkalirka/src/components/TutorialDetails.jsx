@@ -1,7 +1,7 @@
 
 import {useTutorialContext} from '../hooks/useTutorialContext';
 import {useState} from 'react';
-import URL from '../backendURL';
+import URL from '../backendUrl';
 
 
 
@@ -9,7 +9,7 @@ const TutorialDetails = ({tutorial}) => {
     const {dispatch} = useTutorialContext();
     const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user'));
 
-//     const loggedInUserId = localStorage.getItem('user') && JSON.parse(localStorage.getItem('user'))._id;
+    // const loggedInUserId = localStorage.getItem('user') && JSON.parse(localStorage.getItem('user'))._id;
 
     const handleClick = async () => {
 
@@ -36,8 +36,8 @@ const TutorialDetails = ({tutorial}) => {
             <img src={image} alt="of the project"/>
             
             <h2>{tutorial.title}
-            {loggedInUserId === tutorial.creator && isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>}
-
+            {/* {loggedInUserId === tutorial.creator && isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>} */}
+            {isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>}
             
             </h2>
             <h3>{tutorial.stepsTitle}</h3>
