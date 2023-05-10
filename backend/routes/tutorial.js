@@ -18,6 +18,7 @@ const {createTutorial, getTutorials, getTutorial, deleteTutorial, updateTutorial
 const router = express.Router();
 
 router.get('/', getTutorials);
+router.get('/UserPage', getTutorials), 
 
 router.get('/:id', getTutorial);
 
