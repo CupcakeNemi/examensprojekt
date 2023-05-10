@@ -19,9 +19,9 @@ const tutorialSchema = new Schema({
         type: String,
         required: true
     },
-    postedBy:{
+    postedBy: {
         type: mongoose.Schema.ObjectId,
-        ref: "users"
+        ref: "user"
     }
 });
 
