@@ -27,7 +27,7 @@ const app = express();
 
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use('/static', express.static('public/uploads'));
+app.use('/static', express.static('backend/public/uploads'));
 
 app.use(express.json());
 app.use((req, res, next) => {
