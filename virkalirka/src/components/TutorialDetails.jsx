@@ -2,12 +2,14 @@
 import {useTutorialContext} from '../hooks/useTutorialContext';
 import {useState} from 'react';
 import URL from '../backendURL';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 
 
 const TutorialDetails = ({tutorial}) => {
     const {dispatch} = useTutorialContext();
     const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user'));
+    const {user} = useAuthContext();
 
     // const loggedInUserId = localStorage.getItem('user') && JSON.parse(localStorage.getItem('user'))._id;
 
@@ -42,7 +44,7 @@ const TutorialDetails = ({tutorial}) => {
             </h2>
             <h3>{tutorial.stepsTitle}</h3>
             <p>{tutorial.steps}</p>
-            {/* <small>{tutorial.postedBy}</small> */}
+            <small>{tutorial.postedBy}</small>
 
             
         </div>
