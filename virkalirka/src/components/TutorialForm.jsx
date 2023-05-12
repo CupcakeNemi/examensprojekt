@@ -1,32 +1,39 @@
 import { useState } from "react"
 import URL from "../backendURL";
+import { useAuthContext } from "../hooks/useAuthContext";
+// import { useEffect } from "react";
 
 import { useTutorialContext } from "../hooks/useTutorialContext";
 
 
 const TutorialForm = () => {
     const { dispatch } = useTutorialContext();
-
+    const {user} = useAuthContext();
     const [file, setFile] = useState('');
     const [title, setTitle] = useState('');
     const [stepsTitle, setStepsTitle] = useState('');
     const [steps, setSteps] = useState('');
     const [error, setError] = useState(null);
 
+    console.log("logging33",user)
+
     const formData = new FormData();
     if (file) formData.append('filename', file);
     if (title) formData.append('title', title);
     if (stepsTitle) formData.append('stepsTitle', stepsTitle);
     if (steps) formData.append('steps', steps);
+    // if (postedBy) formData.append('postedBy', postedBy);
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-
         const response = await fetch(`${URL}/api/tutorials`, {
 
             method: 'POST',
-            body: formData
+            body: formData,
+            headers: {
+                'Authorization': `Bearer ${user.token}`
+            }
             
         })
         const json = await response.json()
@@ -39,10 +46,9 @@ const TutorialForm = () => {
             setTitle('')
             setStepsTitle('')
             setSteps('')
+            // setPostedBy('')
             dispatch({ type: 'CREATE_TUTORIAL', payload: json })
         }
-
-
     }
 
     return (
@@ -70,6 +76,8 @@ const TutorialForm = () => {
                 value={steps} 
                 placeholder="Steps" 
                 className="formInput"/>
+            
+            {/* <input type="hidden" name="_id" value={user.postedBy} /> */}
 
             <button className="btn">Add Tutorial</button>
             {error && <div className="error">{error}</div>}

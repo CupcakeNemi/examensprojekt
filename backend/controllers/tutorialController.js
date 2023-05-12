@@ -26,14 +26,19 @@ const getTutorial = async (req, res) => {
 
 // ny tutorial
 const createTutorial = async (req, res) => {
+    
 
     const { filename} = req.file;
-    const {title, stepsTitle, steps} = req.body;
-    // const postedBy = ObjectId(req.session.userId);
+    const {title, stepsTitle, steps, _id} = req.body;
+    console.log("logging 2", req.body)
 
     try{
-        const tutorial = await Tutorial.create({filename, title, stepsTitle, steps});
+        // console.log(req, "logging" );
+        // const _id = req.user._id;
+        
+        const tutorial = await Tutorial.create({filename, title, stepsTitle, steps, postedBy: _id});
         res.status(200).json(tutorial);
+        // console.log(postedBy,"hello?")
     } catch (error){
         res.status(400).json({error: error.message})
     }

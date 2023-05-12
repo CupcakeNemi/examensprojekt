@@ -48,7 +48,6 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - fixa userpage så man bara ser sina egna och DÄR kan man deleta och edita
  - fixa createtutorial route
  - lösa så det bara går att deleta ens egna saker 
- - lösa så bilderna syns på sidan
  - fixa edit knapp
  - 
 

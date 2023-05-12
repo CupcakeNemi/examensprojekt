@@ -1,6 +1,5 @@
 const mongoose = require ('mongoose');
 const Schema = mongoose.Schema;
-const { ObjectId } = require('mongodb');
 
 const tutorialSchema = new Schema({
     filename: {
