@@ -1,8 +1,5 @@
 import { useEffect} from "react";
-
 import { Link } from "react-router-dom";
-
-
 import { useTutorialContext } from "../hooks/useTutorialContext";
 import '../index.css'
 
