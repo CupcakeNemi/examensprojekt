@@ -1,5 +1,5 @@
-const mongoose = require ('mongoose');
-const Schema = mongoose.Schema;
+import mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 
 const tutorialSchema = new Schema({
     filename: {
@@ -24,4 +24,8 @@ const tutorialSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Tutorial', tutorialSchema);
+
+const Tutorial = mongoose.model("Tutorial", tutorialSchema);
+
+// module.exports = mongoose.model('Tutorial', tutorialSchema);
+export default Tutorial;

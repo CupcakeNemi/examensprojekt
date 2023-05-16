@@ -8,14 +8,14 @@ import { useTutorialContext } from "../hooks/useTutorialContext";
 
 const TutorialForm = () => {
     const { dispatch } = useTutorialContext();
-    const {user} = useAuthContext();
+    const { user } = useAuthContext();
     const [file, setFile] = useState('');
     const [title, setTitle] = useState('');
     const [stepsTitle, setStepsTitle] = useState('');
     const [steps, setSteps] = useState('');
     const [error, setError] = useState(null);
 
-    console.log("logging33",user)
+    // console.log("logging33",user)
 
     const formData = new FormData();
     if (file) formData.append('filename', file);
@@ -23,6 +23,7 @@ const TutorialForm = () => {
     if (stepsTitle) formData.append('stepsTitle', stepsTitle);
     if (steps) formData.append('steps', steps);
     // if (postedBy) formData.append('postedBy', postedBy);
+    // if (user && user._id) formData.append("postedBy", user._id);
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -36,6 +37,7 @@ const TutorialForm = () => {
             }
             
         })
+        console.log(user.token, "token här")
         const json = await response.json()
 
         if (!response.ok) {
@@ -50,6 +52,7 @@ const TutorialForm = () => {
             dispatch({ type: 'CREATE_TUTORIAL', payload: json })
         }
     }
+    // console.log("user", user._id)
 
     return (
         <form className="addNew" onSubmit={handleSubmit}>

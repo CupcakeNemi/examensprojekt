@@ -1,5 +1,9 @@
-const multer  = require('multer')
-const { v4: uuidv4 } = require('uuid');
+import multer from 'multer';
+import express from 'express';
+import { v4 as uuidv4 } from 'uuid';
+import requireAuth from '../middleware/requireAuth.js';
+import tutorialController from '../controllers/tutorialController.js';
+
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -12,20 +16,20 @@ const storage = multer.diskStorage({
 
 let upload = multer({ storage: storage, limits: {filesize: 300000}});
 
-const express = require('express');
-const {createTutorial, getTutorials, getTutorial, deleteTutorial, updateTutorial} = require('../controllers/tutorialController');
 
 const router = express.Router();
+router.use(requireAuth);
 
-router.get('/', getTutorials);
-router.get('/UserPage', getTutorials), 
+router.get('/', tutorialController.getTutorials);
+router.get('/UserPage', tutorialController.getTutorials), 
 
-router.get('/:id', getTutorial);
+router.get('/:id', tutorialController.getTutorial);
 
-router.post('/', upload.single('filename'), createTutorial);
+router.post('/', upload.single('filename'), tutorialController.createTutorial);
 
-router.delete('/:id', deleteTutorial);
+router.delete('/:id', tutorialController.deleteTutorial);
 
-router.patch('/:id', updateTutorial);
+router.patch('/:id', tutorialController.updateTutorial);
 
-module.exports = router; 
+
+export default router;

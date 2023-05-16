@@ -50,3 +50,13 @@ Fixade så efter man loggat in så redirectas man till home, tog lite tid innan 
 
 ## Onsdag 10/05-23
 Kämpat som tusan med linode men det är ett error efter det andra, ibland går det bra en stund men sen sitter man fast, så nu sitter jag fast igen, får se om anders kan hjälpa mig imorgon.
+
+## Torsdag 11/05-23
+Lyckades lösa linode, nu ska jag forsätta kämpa med att få till postedBy vilket är svårt för att jag inte la till det i början. 
+
+## Måndag 15/05-23
+Kämpade med postedBy sen bestämde jag mig för att byta ut allt från require till import, vilket skapade massa fel, men när jag hade lyckats lösa alla fel så kom jag mycket närmre i postedby, har lite fel nu att mina posts inte visas vilket jag inte förstår vart det kommer ifrån.
+
+## Tisdag 16/05-23
+* halvtids redovisning
+PostedBy finns nu i databasen, har fel med authorisation, att den tycker inte man är tillåten att se inlägg trots att det är ens egna (felet har med requireAuth.js)

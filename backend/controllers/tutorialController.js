@@ -1,6 +1,7 @@
-const Tutorial = require('../models/tutorialSchema');
-const mongoose = require('mongoose');
-const {ObjectId} = require('mongodb'); 
+
+import Tutorial from "../models/tutorialSchema.js";
+import mongoose from "mongoose";
+import { ObjectId } from "mongodb";
 
 // alla tutorials
 const getTutorials = async(req,res) => {
@@ -27,18 +28,17 @@ const getTutorial = async (req, res) => {
 // ny tutorial
 const createTutorial = async (req, res) => {
     
-
     const { filename} = req.file;
-    const {title, stepsTitle, steps, _id} = req.body;
-    console.log("logging 2", req.body)
+    const {title, stepsTitle, steps} = req.body;
+    // console.log("logging 2", req.body)
 
     try{
-        // console.log(req, "logging" );
-        // const _id = req.user._id;
-        
-        const tutorial = await Tutorial.create({filename, title, stepsTitle, steps, postedBy: _id});
+        console.log(req.user,"hello?")
+        // postedby 
+        const postedBy = req.user._id
+        const tutorial = await Tutorial.create({filename, title, stepsTitle, steps, postedBy});
         res.status(200).json(tutorial);
-        // console.log(postedBy,"hello?")
+        
     } catch (error){
         res.status(400).json({error: error.message})
     }
@@ -73,7 +73,7 @@ const updateTutorial = async (req,res) => {
     res.status(200).json(tutorial);
 }
 
-module.exports = {
+export default {
     createTutorial,
     getTutorials,
     getTutorial,

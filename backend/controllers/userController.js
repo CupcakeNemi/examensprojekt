@@ -1,8 +1,9 @@
-const userSchema = require('../models/userSchema');
-const jwt = require('jsonwebtoken');
+import userSchema from '../models/userSchema.js';
+import jwt from 'jsonwebtoken';
+
 
 const createToken = (_id) => {
-    return jwt.sign({_id}, process.env.SESSION_SECRET, {expiresIn: '3d'} )
+    return jwt.sign({ _id }, process.env.SESSION_SECRET, {expiresIn: '3d'} )
 }
 
 const loginUser = async (req, res) =>  {
@@ -32,4 +33,5 @@ const signupUser = async (req, res) =>  {
     
 }
 
-module.exports = {loginUser, signupUser}
+// module.exports = {loginUser, signupUser}
+export default {loginUser, signupUser};

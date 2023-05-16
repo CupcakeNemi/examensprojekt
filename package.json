@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster och tutorials om hur man virkar olika saker",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

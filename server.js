@@ -1,11 +1,20 @@
-require('dotenv').config();
-const express = require('express');
-const mongoose = require('mongoose');
-const path = require('path');
-const tutorialRoutes = require('./backend/routes/tutorial');
-const userRoutes = require('./backend/routes/user');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import dotenv from 'dotenv';
+import express from 'express';
+import mongoose from 'mongoose';
+import path from 'mongoose';
+import tutorialRoutes from './backend/routes/tutorial.js';
+import userRoutes from './backend/routes/user.js';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+
+// require('dotenv').config();
+// const express = require('express');
+// const mongoose = require('mongoose');
+// const path = require('path');
+// const tutorialRoutes = require('./backend/routes/tutorial');
+// const userRoutes = require('./backend/routes/user');
+// const bodyParser = require('body-parser');
+// const cors = require('cors');
 
 
 // Connect to MongoDB database
