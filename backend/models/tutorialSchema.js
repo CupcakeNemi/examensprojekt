@@ -18,6 +18,11 @@ const tutorialSchema = new Schema({
         type: String,
         required: true
     },
+    difficulty:
+    {
+        type: String,
+        required: true
+    },
     postedBy: {
         type: mongoose.Schema.ObjectId,
         ref: "user"

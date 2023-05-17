@@ -1,2 +1,16 @@
-
+.tutorials{
+    display:flex;
+    flex-wrap: wrap;
+}
+.flexDiv{
+    display: flex;
+    
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.tutorialDetails{
+    text-align: center;
+    align-content: center;
+}
 

@@ -15,12 +15,14 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
     - logga ut X
     - lägga upp egna tutorials /
     - gilla/spara tutorials 
-    - bläddra bland content /
+    - bläddra bland content svårighetsgrad /
+
+- extra
     - se videor *
 
 - En gäst ska kunna
     - Registrera sig
-    - bläddra bland content *
+    - inte bläddra bland content *
 
 
 # Samarbeten: Om ni ska göra detta i grupp eller tillsammans med ett företag skriv det här och hur ni har tänkt samarbeta

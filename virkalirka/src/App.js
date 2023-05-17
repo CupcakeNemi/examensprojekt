@@ -1,13 +1,10 @@
 import React, {useState} from 'react';
-
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-
 import Home from './pages/home';
 import Login from './pages/login';
 import Signup from './pages/signup';
 // import createTutorial from './pages/createTutorial';
-
-// import UserPage from './pages/userPage';
+import UserPage from './pages/userPage';
 import Nav from './components/Nav';
 
 
@@ -26,7 +23,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
-        {/* <Route path='/userPage' element={<UserPage/>}/> */}
+        <Route path='/userPage' element={<UserPage/>}/>
 
         {/* <Route path='/createTutorial' element={<createTutorial/>}/> */}
       </Routes>

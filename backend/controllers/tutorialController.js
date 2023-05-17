@@ -25,15 +25,30 @@ const getTutorial = async (req, res) => {
     res.status(200).json(tutorial);
 };
 
+// User Page
+const getUserTutorial = async (req, res) => {
+    const tutorials = await Tutorial.find({postedBy: req.user._id});
+    const { id } = req.user._id;
+    console.log(id, "ID")
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({error: "GET: There is no such tutorial"})
+    };
+    const tutorial = await Tutorial.findById(id);
+
+    if (!tutorial){
+        return res.status(404).json({error: "coulnd find the tutorial"})
+    };
+
+    res.status(200).json(tutorials);
+};
+
 // ny tutorial
 const createTutorial = async (req, res) => {
     
     const { filename} = req.file;
     const {title, stepsTitle, steps} = req.body;
-    // console.log("logging 2", req.body)
 
     try{
-        console.log(req.user,"hello?")
         // postedby 
         const postedBy = req.user._id
         const tutorial = await Tutorial.create({filename, title, stepsTitle, steps, postedBy});
@@ -78,5 +93,6 @@ export default {
     getTutorials,
     getTutorial,
     deleteTutorial,
-    updateTutorial
+    updateTutorial,
+    getUserTutorial
 }

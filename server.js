@@ -39,7 +39,7 @@ app.use('/static', express.static('backend/public/uploads'));
 
 app.use(express.json());
 app.use((req, res, next) => {
-    console.log(req.path, req.method);
+    // console.log(req.path, req.method);
     next();
 });
 

@@ -26,12 +26,10 @@ export const useLogin = () => {
         if (response.ok) {
             // localstorage user
             localStorage.setItem('user', JSON.stringify(json));
-            // localStorage.setItem('user', JSON.stringify(userWithToken));
 
             dispatch({type: 'LOGIN', payload: json});
             setIsLoading(false);
             navigate('/');
-            
         }
     }
     return {login, isLoading, error,}

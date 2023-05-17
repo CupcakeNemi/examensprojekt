@@ -18,19 +18,16 @@ h2 {
   font-family: "Julius Sans One", sans-serif;
   font-weight: 600;
   font-size: 24px;
-  margin-left: 24px;
 }
 
 h3 {
   font-weight: 500;
   font-size: 20px;
-  margin-left: 24px;
 }
 
 p {
   font-weight: 400;
   font-size: 16px;
-  margin-left: 24px;
 }
 
 .link {
@@ -176,5 +173,26 @@ ul {
 }
 
 .content-img {
-  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.tutorials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexDiv {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorialDetails {
+  text-align: center;
+  align-content: center;
 }

@@ -5,11 +5,7 @@ import jwt from 'jsonwebtoken';
 dotenv.config();
 
 const requireAuth = async (req, res, next) => {
-// verify user is authenticated
 const { authorization } = req.headers;
-// console.log(req, "är denna också undefined?") 
-// console.log(req.headers, "what about this?") 
-// console.log(authorization,"denna är undefined")
 
 if (!authorization) {
 return res.status(401).json({error: 'Authorization token required'});
@@ -17,14 +13,9 @@ return res.status(401).json({error: 'Authorization token required'});
 
 const token = authorization.split(' ')[1];
 
-
 try {
-    console.log("token",token)
-    
     const { _id } = jwt.verify(token, process.env.SESSION_SECRET);
-
     req.user = await userSchema.findOne({ _id }).select('_id');
-    console.log("id", _id)
     next();
 
 } catch (error) {
