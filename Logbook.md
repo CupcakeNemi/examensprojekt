@@ -60,3 +60,6 @@ Kämpade med postedBy sen bestämde jag mig för att byta ut allt från require 
 ## Tisdag 16/05-23
 * halvtids redovisning
 PostedBy finns nu i databasen, har fel med authorisation, att den tycker inte man är tillåten att se inlägg trots att det är ens egna (felet har med requireAuth.js)
+
+## Onsdag 17/05-23
+Löst authorisation felet, jag har börjat med Userpagen som också hade ett authorisation fel som jag nu löste, så nu är det att tutorial är undefined i userPageCom som jag inte lyckas hitta felet på.
