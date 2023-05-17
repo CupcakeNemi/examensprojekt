@@ -7,7 +7,9 @@ dotenv.config();
 const requireAuth = async (req, res, next) => {
 // verify user is authenticated
 const { authorization } = req.headers;
-console.log(authorization,"denna är undefined")
+// console.log(req, "är denna också undefined?") 
+// console.log(req.headers, "what about this?") 
+// console.log(authorization,"denna är undefined")
 
 if (!authorization) {
 return res.status(401).json({error: 'Authorization token required'});

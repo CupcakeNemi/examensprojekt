@@ -34,7 +34,6 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Create Express app
 const app = express();
 
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/static', express.static('backend/public/uploads'));
 

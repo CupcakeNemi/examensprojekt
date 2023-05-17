@@ -6,15 +6,22 @@ import '../index.css'
 import TutorialDetails from "../components/TutorialDetails";
 import TutorialForm from "../components/TutorialForm";
 import URL from "../backendURL";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 
 const Home = () => {
     const {tutorials, dispatch} = useTutorialContext();
+    const { user } = useAuthContext();
 
     useEffect(() => {
         const fetchTutorials = async () => {
 
-            const response = await fetch (`${URL}/api/tutorials`);
+            const response = await fetch (`${URL}/api/tutorials`,{
+                method: 'GET',
+                headers: {
+                'Authorization': `Bearer ${user.token}`
+                }
+                });
 
             const json = await response.json();
 

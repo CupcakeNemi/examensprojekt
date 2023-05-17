@@ -7,7 +7,7 @@ import { useAuthContext } from '../hooks/useAuthContext';
 
 const TutorialDetails = ({tutorial}) => {
     const {dispatch} = useTutorialContext();
-    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user'));
+    // const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user'));
     const {user} = useAuthContext();
 
     // const loggedInUserId = localStorage.getItem('user') && JSON.parse(localStorage.getItem('user'))._id;
@@ -27,8 +27,8 @@ const TutorialDetails = ({tutorial}) => {
 
     const image = `${URL}/static/${tutorial.filename}`;
 
-    console.log('isLoggedIn:', isLoggedIn);
-    console.log("local storage auth token",localStorage.getItem('user'));
+    // console.log('isLoggedIn:', isLoggedIn);
+    // console.log("local storage auth token",localStorage.getItem('user'));
 
     return(
         
@@ -38,7 +38,7 @@ const TutorialDetails = ({tutorial}) => {
             
             <h2>{tutorial.title}
             {/* {loggedInUserId === tutorial.creator && isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>} */}
-            {isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>}
+            {/* {isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>} */}
             
             </h2>
             <h3>{tutorial.stepsTitle}</h3>

@@ -18,6 +18,7 @@ let upload = multer({ storage: storage, limits: {filesize: 300000}});
 
 
 const router = express.Router();
+
 router.use(requireAuth);
 
 router.get('/', tutorialController.getTutorials);
