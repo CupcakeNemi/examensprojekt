@@ -25,6 +25,8 @@ const TutorialDetails = ({tutorial}) => {
 
     const image = `${URL}/static/${tutorial.filename}`;
 
+    
+
     // console.log('isLoggedIn:', isLoggedIn);
     // console.log("local storage auth token",localStorage.getItem('user'));
 

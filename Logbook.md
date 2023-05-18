@@ -63,3 +63,6 @@ PostedBy finns nu i databasen, har fel med authorisation, att den tycker inte ma
 
 ## Onsdag 17/05-23
 Löst authorisation felet, jag har börjat med Userpagen som också hade ett authorisation fel som jag nu löste, så nu är det att tutorial är undefined i userPageCom som jag inte lyckas hitta felet på.
+
+## Torsdag 18/05-23
+Löst problemet med userpage och nu är userpage uppe och man kan se sina egna och ta bort dom där. Lagt till difficulty i schema och fått ut det på sidan, nästa steg blir att fixa en sorterings funktion.
