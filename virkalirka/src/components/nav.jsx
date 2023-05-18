@@ -19,6 +19,10 @@ const Nav = () => {
                 <Link to="/">
                     <p className="navPages">Home</p>
                 </Link>
+                <Link to="/userPage">
+                    <p className="userpage">Profile</p>
+                </Link>
+                
                 <nav>
                     {user && (
                         <div>

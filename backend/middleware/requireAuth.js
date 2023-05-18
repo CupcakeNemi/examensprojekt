@@ -18,11 +18,11 @@ try {
     
     debugger;
     req.user = await userSchema.findOne({ _id }).select('_id');
-    console.log(_id,"kalaspuffar")
+
     next();
 
 } catch (error) {
-// console.log(error);
+console.log(error);
 res.status(401).json({error: 'Request is not authorized'});
 }
 }

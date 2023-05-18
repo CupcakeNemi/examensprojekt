@@ -144,6 +144,10 @@ ul {
   margin: 5px;
 }
 
+.difficulty {
+  margin-right: 5px;
+}
+
 .btn {
   background-color: #FCFF7B;
   border-style: none;

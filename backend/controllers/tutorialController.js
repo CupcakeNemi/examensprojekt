@@ -29,7 +29,6 @@ const getTutorial = async (req, res) => {
 const getUserTutorial = async (req, res) => {
     const tutorials = await Tutorial.find({postedBy: req.user._id});
     const { _id } = req.user;
-    console.log(req.user, "ID")
     if(!mongoose.Types.ObjectId.isValid(_id)){
         return res.status(404).json({error: "GET: There is no such tutorial"})
     };
@@ -41,12 +40,12 @@ const getUserTutorial = async (req, res) => {
 const createTutorial = async (req, res) => {
     
     const { filename} = req.file;
-    const {title, stepsTitle, steps} = req.body;
+    const {title, stepsTitle, steps, difficulty} = req.body;
 
     try{
         // postedby 
         const postedBy = req.user._id
-        const tutorial = await Tutorial.create({filename, title, stepsTitle, steps, postedBy});
+        const tutorial = await Tutorial.create({filename, title, stepsTitle, steps, difficulty, postedBy});
         res.status(200).json(tutorial);
         
     } catch (error){

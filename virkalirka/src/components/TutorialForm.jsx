@@ -13,6 +13,7 @@ const TutorialForm = () => {
     const [title, setTitle] = useState('');
     const [stepsTitle, setStepsTitle] = useState('');
     const [steps, setSteps] = useState('');
+    const [difficulty, setDifficulty] = useState();
     const [error, setError] = useState(null);
 
     // console.log("logging33",user)
@@ -22,6 +23,7 @@ const TutorialForm = () => {
     if (title) formData.append('title', title);
     if (stepsTitle) formData.append('stepsTitle', stepsTitle);
     if (steps) formData.append('steps', steps);
+    if (difficulty) formData.append('difficulty', difficulty);
     // if (postedBy) formData.append('postedBy', postedBy);
     // if (user && user._id) formData.append("postedBy", user._id);
 
@@ -48,6 +50,7 @@ const TutorialForm = () => {
             setTitle('')
             setStepsTitle('')
             setSteps('')
+            setDifficulty()
             // setPostedBy('')
             dispatch({ type: 'CREATE_TUTORIAL', payload: json })
         }
@@ -65,7 +68,18 @@ const TutorialForm = () => {
                 placeholder="Title" 
                 className="formInput"
                 />
-
+            <select 
+                name="difficulty" 
+                id="difficulty" 
+                onChange={(e) => setDifficulty(e.target.value)}
+                value={difficulty} 
+                required
+                >
+                <option value=""></option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
             <input 
                 type="text" 
                 onChange={(e) => setStepsTitle(e.target.value)} 
@@ -79,8 +93,7 @@ const TutorialForm = () => {
                 value={steps} 
                 placeholder="Steps" 
                 className="formInput"/>
-            
-            {/* <input type="hidden" name="_id" value={user.postedBy} /> */}
+        
 
             <button className="btn">Add Tutorial</button>
             {error && <div className="error">{error}</div>}

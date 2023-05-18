@@ -21,6 +21,7 @@ const tutorialSchema = new Schema({
     difficulty:
     {
         type: String,
+        enum: ['Easy', 'Medium', 'Hard'],
         required: true
     },
     postedBy: {

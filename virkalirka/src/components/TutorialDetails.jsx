@@ -7,7 +7,7 @@ const TutorialDetails = ({tutorial}) => {
     const {dispatch} = useTutorialContext();
     // const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user'));
     const {user} = useAuthContext();
-    console.log(tutorial, "TUTORIAL")
+    // console.log(tutorial, "TUTORIAL")
     // const loggedInUserId = localStorage.getItem('user') && JSON.parse(localStorage.getItem('user'))._id;
 
     const handleClick = async () => {
@@ -38,6 +38,7 @@ const TutorialDetails = ({tutorial}) => {
             </h2>
             {/* <h3>{tutorial.stepsTitle}</h3>
             <p>{tutorial.steps}</p> */}
+            <small className='difficulty'>{tutorial.difficulty}</small>
             <small className='postedBy'>{tutorial.postedBy}</small>
 
             
