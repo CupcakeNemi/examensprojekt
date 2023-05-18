@@ -28,16 +28,16 @@ const getTutorial = async (req, res) => {
 // User Page
 const getUserTutorial = async (req, res) => {
     const tutorials = await Tutorial.find({postedBy: req.user._id});
-    const { id } = req.user._id;
-    console.log(id, "ID")
-    if(!mongoose.Types.ObjectId.isValid(id)){
+    const { _id } = req.user;
+    console.log(req.user, "ID")
+    if(!mongoose.Types.ObjectId.isValid(_id)){
         return res.status(404).json({error: "GET: There is no such tutorial"})
     };
-    const tutorial = await Tutorial.findById(id);
+    // const tutorial = await Tutorial.findById(_id);
 
-    if (!tutorial){
-        return res.status(404).json({error: "coulnd find the tutorial"})
-    };
+    // if (!tutorial){
+    //     return res.status(404).json({error: "coulnd find the tutorial"})
+    // };
 
     res.status(200).json(tutorials);
 };

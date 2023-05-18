@@ -22,7 +22,8 @@ const router = express.Router();
 router.use(requireAuth);
 
 router.get('/', tutorialController.getTutorials);
-router.get('/usertutorials', tutorialController.getUserTutorial), 
+
+router.get('/usertutorials', tutorialController.getUserTutorial); 
 
 router.get('/:id', tutorialController.getTutorial);
 

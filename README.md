@@ -21,8 +21,8 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
     - se videor *
 
 - En gäst ska kunna
-    - Registrera sig
-    - inte bläddra bland content *
+    - Registrera sig X
+    - inte bläddra bland content X
 
 
 # Samarbeten: Om ni ska göra detta i grupp eller tillsammans med ett företag skriv det här och hur ni har tänkt samarbeta

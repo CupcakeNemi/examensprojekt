@@ -17,7 +17,7 @@ const UserPage = () => {
         const fetchTutorials = async () => {
 
             // const response = await fetch (`${URL}/api/tutorials/`);
-            const response = await fetch (`${URL}/api/tutorials`,{
+            const response = await fetch (`${URL}/api/tutorials/usertutorials`,{
                 method: 'GET',
                 headers: {
                 'Authorization': `Bearer ${user.token}`
@@ -36,11 +36,11 @@ const UserPage = () => {
     return (
         <div className="userPage">
             <div className="tutorials">
-                {tutorials && tutorials.map((tutorial => (
+                {userTutorials && userTutorials.map((tutorial => (
                     <UserPageCom key={tutorial._id} tutorial={tutorial} />
                 )))}
             </div>
-            <UserPageCom/>
+
         </div>
         
     )

@@ -3,19 +3,19 @@ import {useState} from 'react';
 import URL from '../backendURL';
 import { useAuthContext } from '../hooks/useAuthContext';
 
-
-
-const TutorialDetails = ({tutorial}) => {
+const UserPageCom = ({tutorial}) => {
     const {dispatch} = useTutorialContext();
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('user'));
     const {user} = useAuthContext();
-    console.log(tutorial, "TUTORIAL")
-    
+    const loggedInUserId = localStorage.getItem('user') && JSON.parse(localStorage.getItem('user'))._id;
+    // console.log(tutorial, "TUTORIAL")
 
     const handleClick = async () => {
-
         const response = await fetch(`${URL}/api/tutorials/` + tutorial._id, {
-
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${user.token}`
+                }
         });
         const json = await response.json();
 
@@ -24,21 +24,20 @@ const TutorialDetails = ({tutorial}) => {
         }
     }
 
-    // const image = `${URL}/static/${tutorial.filename}`;
+    const image = `${URL}/static/${tutorial.filename}`;
 
     return(
         // <h1>hej</h1>
         <div className='flexDiv'>
         <div className="tutorialDetails">
-            {/* <img src={image} alt="of the project" className='content-img'/> */}
-            {/* <h2>{tutorial.title} */}
-            {/* {loggedInUserId === tutorial.creator && isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>} */}
-            {/* {isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>} */}
-            {/* </h2> */}
-            {/* <h3>{tutorial.stepsTitle}</h3>
-            <p>{tutorial.steps}</p> */}
-            {/* <small className='postedBy'>{tutorial.postedBy}</small> */}
-
+            <img src={image} alt="of the project" className='content-img'/> 
+            <h2>{tutorial.title}
+            {/* {loggedInUserId === tutorial.postedBy && isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>} */}
+            {isLoggedIn && <i onClick={handleClick} id="delBtn" className=" fa-solid fa-trash-can "></i>}
+            </h2>
+            <h3>{tutorial.stepsTitle}</h3>
+            <p>{tutorial.steps}</p> 
+            <small className='postedBy'>{tutorial.postedBy}</small>
             
         </div>
         </div> 
@@ -46,7 +45,7 @@ const TutorialDetails = ({tutorial}) => {
     )
 }
 
-export default TutorialDetails;
+export default UserPageCom;
 
 // import {useTutorialContext} from '../hooks/useTutorialContext';
 // import { useState, useEffect } from 'react';

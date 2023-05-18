@@ -1,6 +1,5 @@
 import { createContext, useReducer } from "react";
 
-
 export const TutorialContext = createContext();
 export const tutorialsReducer = (state, action) => {
     switch (action.type) {
