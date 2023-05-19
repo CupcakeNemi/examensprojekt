@@ -66,3 +66,6 @@ Löst authorisation felet, jag har börjat med Userpagen som också hade ett aut
 
 ## Torsdag 18/05-23
 Löst problemet med userpage och nu är userpage uppe och man kan se sina egna och ta bort dom där. Lagt till difficulty i schema och fått ut det på sidan, nästa steg blir att fixa en sorterings funktion.
+
+## Fredag 19/05-23
+Fixade någon slags sort som jag får ändra sedan så den fungerar som jag vill
