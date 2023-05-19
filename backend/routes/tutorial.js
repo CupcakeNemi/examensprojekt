@@ -7,14 +7,14 @@ import tutorialController from '../controllers/tutorialController.js';
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, './backend/public/uploads'); 
+        cb(null, './backend/public/uploads');
     },
     filename: (req, file, cb) => {
         cb(null, uuidv4() + file.originalname);
-    } 
+    }
 });
 
-let upload = multer({ storage: storage, limits: {filesize: 300000}});
+let upload = multer({ storage: storage, limits: { filesize: 300000 } });
 
 
 const router = express.Router();
@@ -23,7 +23,8 @@ router.use(requireAuth);
 
 router.get('/', tutorialController.getTutorials);
 
-router.get('/usertutorials', tutorialController.getUserTutorial); 
+router.get('/usertutorials', tutorialController.getUserTutorial);
+
 
 router.get('/:id', tutorialController.getTutorial);
 

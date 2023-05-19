@@ -75,7 +75,7 @@ const TutorialForm = () => {
                 value={difficulty} 
                 required
                 >
-                <option value=""></option>
+                <option value="">Difficulty</option>
                 <option value="Easy">Easy</option>
                 <option value="Medium">Medium</option>
                 <option value="Hard">Hard</option>

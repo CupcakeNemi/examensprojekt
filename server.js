@@ -7,16 +7,6 @@ import userRoutes from './backend/routes/user.js';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
-// require('dotenv').config();
-// const express = require('express');
-// const mongoose = require('mongoose');
-// const path = require('path');
-// const tutorialRoutes = require('./backend/routes/tutorial');
-// const userRoutes = require('./backend/routes/user');
-// const bodyParser = require('body-parser');
-// const cors = require('cors');
-
-
 // Connect to MongoDB database
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
@@ -42,6 +32,7 @@ app.use((req, res, next) => {
     // console.log(req.path, req.method);
     next();
 });
+
 
 app.use(cors());
 app.use('/api/tutorials', tutorialRoutes);

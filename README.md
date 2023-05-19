@@ -44,6 +44,7 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npm i multer
  - npm i body-parser
  - npm i cors
+ - npm i axios
 
  # att göra
  - fixa schema postedby
