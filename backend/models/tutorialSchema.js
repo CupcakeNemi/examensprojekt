@@ -24,6 +24,10 @@ const tutorialSchema = new Schema({
         enum: ['Easy', 'Medium', 'Hard'],
         required: true
     },
+    likes:[{
+        type: String,
+        default: [],
+    }],
     postedBy: {
         type: mongoose.Schema.ObjectId,
         ref: "user"

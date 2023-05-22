@@ -103,6 +103,18 @@ h1 {
   color: #fff;
 }
 
+.flexForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.addNew {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: auto;
+}
+
 ul {
   border-radius: 10px 0 0 10px;
   padding: 20px 20px 20px 40px;
@@ -148,6 +160,14 @@ ul {
   margin-right: 5px;
 }
 
+button {
+  background-color: #FCFF7B;
+  border-style: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+
 .btn {
   background-color: #FCFF7B;
   border-style: none;
@@ -176,12 +196,18 @@ ul {
   margin-left: 10px;
 }
 
+.fa-solid.fa-heart {
+  display: hidden;
+  color: #1D232E;
+}
+
 .content-img {
   display: block;
   margin: auto;
   margin-top: 10px;
   width: 100px;
   height: 100px;
+  border-radius: 10px;
 }
 
 .tutorials {
@@ -194,6 +220,7 @@ ul {
   margin: auto;
   align-items: center;
   justify-content: center;
+  padding: 20px 0;
 }
 
 .tutorialDetails {

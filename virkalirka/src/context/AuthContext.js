@@ -27,14 +27,6 @@ export const AuthContextProvider = ({ children }) => {
         }
     }, [])
 
-    // useEffect(() => {
-    //     const user = JSON.parse(localStorage.getItem('user'))
-    //     if (user && user.token) {
-    //         dispatch({ type: 'LOGIN', payload: user })
-    //     }
-    // }, [])
-
-
     return (
         <AuthContext.Provider value={{...state, dispatch}}>
             {children}

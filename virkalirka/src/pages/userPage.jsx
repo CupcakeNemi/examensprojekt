@@ -16,7 +16,6 @@ const UserPage = () => {
     useEffect(() => {
         const fetchTutorials = async () => {
 
-            // const response = await fetch (`${URL}/api/tutorials/`);
             const response = await fetch (`${URL}/api/tutorials/usertutorials`,{
                 method: 'GET',
                 headers: {
@@ -35,6 +34,10 @@ const UserPage = () => {
     const userTutorials = tutorials.filter(tutorial => tutorial.creator === userId);
     return (
         <div className="userPage">
+            <div>
+                <h4>Saved tutorials</h4>
+                
+            </div>
             <div className="tutorials">
                 {userTutorials && userTutorials.map((tutorial => (
                     <UserPageCom key={tutorial._id} tutorial={tutorial} />

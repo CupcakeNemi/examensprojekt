@@ -28,7 +28,10 @@ const UserPageCom = ({tutorial}) => {
 
     return(
         // <h1>hej</h1>
+        
         <div className='flexDiv'>
+            
+
         <div className="tutorialDetails">
             <img src={image} alt="of the project" className='content-img'/> 
             <h2>{tutorial.title}

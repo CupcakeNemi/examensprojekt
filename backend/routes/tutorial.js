@@ -25,6 +25,8 @@ router.get('/', tutorialController.getTutorials);
 
 router.get('/usertutorials', tutorialController.getUserTutorial);
 
+router.put('/like/save', tutorialController.saveTutorial);
+router.put('/like/unsave', tutorialController.unsaveTutorial);
 
 router.get('/:id', tutorialController.getTutorial);
 

@@ -69,3 +69,9 @@ Löst problemet med userpage och nu är userpage uppe och man kan se sina egna o
 
 ## Fredag 19/05-23
 Fixade någon slags sort som jag får ändra sedan så den fungerar som jag vill
+
+## Söndag 21/05-23
+Försökte fixa så man kan gå in på en tutorial
+
+## Måndag 22/05-23
+Fastnade på likes 

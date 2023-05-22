@@ -58,6 +58,7 @@ const TutorialForm = () => {
     // console.log("user", user._id)
 
     return (
+        <div className="flexForm">
         <form className="addNew" onSubmit={handleSubmit}>
             <h4>Add new tutorial</h4>
             <input type="file" id="file" name="file" onChange={(e) => setFile(e.target.files[0])}  />
@@ -99,6 +100,7 @@ const TutorialForm = () => {
             {error && <div className="error">{error}</div>}
 
         </form>
+        </div>
     )
 }
 

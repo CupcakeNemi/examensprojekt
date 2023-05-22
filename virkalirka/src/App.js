@@ -12,8 +12,7 @@ import Nav from './components/Nav';
 
 function App() {
 
-  // const createTutorialRouter = require('./routes/createTutorial');
-  // app.use('/api/tutorials/createTutorial', createTutorialRouter);
+  
   return (
     <div className="App">
       <BrowserRouter>

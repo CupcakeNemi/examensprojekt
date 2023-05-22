@@ -1,5 +1,14 @@
+button {
+    background-color: $btn-color;
+    border-style: none;
+    border-radius: 100px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    
+}
+
 .btn {
-    background-color: #FCFF7B;
+    background-color: $btn-color;
     border-style: none;
     border-radius: 100px;
     width: 130px;
@@ -23,15 +32,22 @@
     width: 100px;
     padding: 10px;
     border-style: none;
-    background-color: #FCFF7B;
+    background-color: $btn-color;
 }
 
 #delBtn{
     border-radius: 100px;
     padding:7px;
-    background-color: #FCFF7B;
+    background-color: $btn-color;
     font-size: 14px;
 
     margin-left:  10px;
 
 }
+
+.fa-solid.fa-heart{
+    display: hidden;
+
+    color: $font-color;
+}
+

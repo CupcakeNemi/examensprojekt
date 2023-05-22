@@ -47,12 +47,14 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npm i axios
 
  # att göra
- - fixa schema postedby
- - fixa userpage så man bara ser sina egna och DÄR kan man deleta och edita
+ - fixa sorting funktionen
+ - fixa create så man kan skapa flera steps
+ - fixa schema postedby efter username
  - fixa createtutorial route
- - lösa så det bara går att deleta ens egna saker 
  - fixa edit knapp
- - 
+ -  göra så man kan gå in på posts för att se dom
+
+
 
 ## För att starta appen
  Skriv npm install på både rot nivå och i virkalirka appen, starta sedan båda 
