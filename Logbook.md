@@ -77,4 +77,7 @@ Försökte fixa så man kan gå in på en tutorial
 Fastnade på likes 
 
 ## Tisdag 23/05-23
-Kommit närmre i liksen, en konsoll log resultat visar null, vilket ska lösas på något sätt
+Kommit närmre i liksen, en konsoll log resultat visar null, vilket ska lösas på något sätt.
+
+## Onsdag 24/05-23
+Likes fungerar, gjort så man kan lägga till fler steps i en tutorial, nu håller jag på och försöka göra så man kan gå in på en tutorial

@@ -6,9 +6,7 @@ import Signup from './pages/signup';
 // import createTutorial from './pages/createTutorial';
 import UserPage from './pages/userPage';
 import Nav from './components/Nav';
-
-
-
+import TutorialPage from './components/TutorialPage';
 
 function App() {
 
@@ -19,10 +17,11 @@ function App() {
       <Nav/>
       <div className='pages'>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/userPage' element={<UserPage/>}/>
+        <Route path='/tutorial/:id' component={<TutorialPage/>} />
 
         {/* <Route path='/createTutorial' element={<createTutorial/>}/> */}
       </Routes>

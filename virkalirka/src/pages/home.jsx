@@ -11,7 +11,6 @@ import TutorialList from "../components/Sort.jsx";
 import { useState } from "react";
 
 
-
 const Home = () => {
     const { tutorials, dispatch } = useTutorialContext();
     const { user } = useAuthContext();
@@ -40,11 +39,24 @@ const Home = () => {
         
         <div className="home">
             <TutorialList/>
+
             <div className="tutorials">
+            {tutorials &&
+                tutorials.map((tutorial) => (
+                    <div key={tutorial._id}>
+                        <TutorialDetails tutorial={tutorial} />
+                        
+                    </div>
+                ))}
+        </div>
+            {/* <div className="tutorials">
                 {tutorials && tutorials.map((tutorial => (
                     <TutorialDetails key={tutorial._id} tutorial={tutorial} />
+                    
+                    
                 )))}
-            </div>
+                
+            </div> */}
             <button><Link to="/createTutorial">Create Tutorial</Link></button>
             
             <TutorialForm />

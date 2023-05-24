@@ -2,6 +2,7 @@ import { useTutorialContext } from '../hooks/useTutorialContext';
 import { useEffect, useState } from 'react';
 import URL from '../backendURL';
 import { useAuthContext } from '../hooks/useAuthContext';
+import { Link } from 'react-router-dom';
 
 const TutorialDetails = ({ tutorial }) => {
     const { dispatch } = useTutorialContext();
@@ -62,10 +63,13 @@ const TutorialDetails = ({ tutorial }) => {
 
                 <img src={image} alt="of the project" className='content-img' />
                 <h2>{tutorial.title}</h2>
+                <Link to={`/tutorial/${tutorial._id}`}>View Tutorial</Link>
                 <div>
                     <small className='difficulty'>{tutorial.difficulty}</small>
                 </div>
+                
                 <div>
+                
                     {/* <small className='postedBy'>{tutorial.postedBy}</small> */}
                 </div>
                 {/* <i onClick={handleLike} className="fa-regular fa-heart"></i>

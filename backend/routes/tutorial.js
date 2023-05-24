@@ -23,6 +23,8 @@ router.use(requireAuth);
 
 router.get('/', tutorialController.getTutorials);
 
+router.get('/:id', tutorialController.getTutorial);
+
 router.get('/usertutorials', tutorialController.getUserTutorial);
 
 router.put('/:id/like', tutorialController.saveTutorial);
