@@ -11,11 +11,11 @@ const tutorialSchema = new Schema({
         required: true
     },
     stepsTitle: {
-        type: String,
+        type: [String],
         required: true
     },
     steps: {
-        type: String,
+        type: [String],
         required: true
     },
     difficulty:
