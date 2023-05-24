@@ -119,7 +119,7 @@ const TutorialForm = () => {
                     </div>
                 ))}
 
-                <button className="btn" type="button" onClick={addStep}><i class="fa-solid fa-plus"></i></button>
+                <button className="btn" type="button" onClick={addStep}><i className="fa-solid fa-plus"></i></button>
                 <button className="btn">Add Tutorial</button>
                 {error && <div className="error">{error}</div>}
             </form>
