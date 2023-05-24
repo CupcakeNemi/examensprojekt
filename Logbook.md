@@ -75,3 +75,6 @@ Försökte fixa så man kan gå in på en tutorial
 
 ## Måndag 22/05-23
 Fastnade på likes 
+
+## Tisdag 23/05-23
+Kommit närmre i liksen, en konsoll log resultat visar null, vilket ska lösas på något sätt

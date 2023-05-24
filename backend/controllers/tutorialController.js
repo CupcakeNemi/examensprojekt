@@ -1,7 +1,6 @@
-
 import Tutorial from "../models/tutorialSchema.js";
 import mongoose from "mongoose";
-import { ObjectId } from "mongodb";
+
 
 
 
@@ -13,52 +12,36 @@ const getTutorials = async (req, res) => {
 
 // save tutorial
 const saveTutorial = async (req, res) => {
+    const {id} = req.params;
+    const {user_id} = req.body;
+    console.log(req.body, "hallååå??")
     console.log('Save Tutorial route reached');
-    Tutorial.findByIdAndUpdate(req.body.tutorialId,{
-        $push:{likes:req.user._id}
-    }, {
-        new: true
-    }).exec((err, result)=>{
-        if(err){
-            return res.status(422).json({error:err})
-        }else{
-            res.json(result)
+    try {
+        const tutorial = await Tutorial.findById(id);
+        if (!tutorial) {
+            return res.status(404).json({error: "Tutorial not found"});
         }
-    })
-}
-const unsaveTutorial = async (req, res) => {
-    Tutorial.findByIdAndUpdate(req.body.tutorialId,{
-        $pull:{likes:req.user._id}
-    }, {
-        new: true
-    }).exec((err, result)=>{
-        if(err){
-            return res.status(422).json({error:err})
-        }else{
-            res.json(result)
+
+        const checkLiked = tutorial.likes.findIndex((like) => like === user_id);
+
+        if (checkLiked !== -1){
+            postMessage.likes.splice(checkLiked, 1);
+            await tutorial.save();
+            return res.status(200).json({message: "Tutorial unliked"});
         }
-    })
-}
-// const saveTutorial = async (req, res) => {
-//     const tutorialId = req.params.id;
 
-//     try {
-//         const tutorial = await Tutorial.findById(tutorialId);
+        if (checkLiked < 1) {
+            tutorial.likes.push(user_id);
+            await tutorial.save();
 
-//         if (!tutorial) {
-//             return res.status(404).json({ error: 'Tutorial not found' });
-//         }
+            res.status(200).json({message: "You liked the tutorial"})
+        }
 
-//         tutorial.likes += 1;
-
-//         await tutorial.save();
-
-//         res.json({ message: 'Tutorial liked/saved successfully' });
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).json({ error: 'Server error' });
-//     }
-// };
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ err: 'Server error' });
+    }
+};
 
 // en tutorial
 const getTutorial = async (req, res) => {
@@ -141,5 +124,5 @@ export default {
     updateTutorial,
     getUserTutorial,
     saveTutorial,
-    unsaveTutorial
+
 }

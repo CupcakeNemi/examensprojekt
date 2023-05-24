@@ -1,18 +1,21 @@
 import { useTutorialContext } from '../hooks/useTutorialContext';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import URL from '../backendURL';
 import { useAuthContext } from '../hooks/useAuthContext';
-
-
 
 const TutorialDetails = ({ tutorial }) => {
     const { dispatch } = useTutorialContext();
     const { user } = useAuthContext();
-    const [liked, setLiked] = useState(false);
+    const [liked, setLiked] = useState(tutorial.likes.includes(user.user._id));
     const image = `${URL}/static/${tutorial.filename}`;
     const [selectedTutorial, setSelectedTutorial] = useState(null);
     const _id = tutorial._id
 
+    useEffect(() => {
+        setLiked(tutorial.likes.includes(user.user._id))
+    }, [tutorial.likes, user.user._id])
+
+    // gå till en tutorial
     const handleClick = async () => {
         try {
             const response = await fetch(`${URL}/api/tutorials/${tutorial._id}`, {
@@ -29,21 +32,29 @@ const TutorialDetails = ({ tutorial }) => {
 
     };
 
-    const likePost = () => {
-        fetch(`${URL}/like/save`, {
+    const handleLike = async (id) => {
+        const response = await fetch(`${URL}/api/tutorials/${id}/like`, {
             method: 'PUT',
             headers: {
-                "Content-Type": "application",
+                "Content-Type": "application/json",
                 'Authorization': `Bearer ${user.token}`
             },
             body: JSON.stringify({
-                tutorialId: _id
+                user_id: user.user._id
             })
-        }). then(res=>res.json())
-        .then(result=>{
-            console.log(result, "resultat")
         })
+        if (response.ok) {
+            const updatedTutorial = await response.json();
+            dispatch({ type: 'EDIT_POST', payload: updatedTutorial });
+        }
     }
+
+    const handleLikeClick = async (tutorialId) => {
+        await handleLike(tutorialId);
+
+        setLiked(!liked);
+
+    };
 
     return (
         <div className='flexDiv'>
@@ -59,8 +70,8 @@ const TutorialDetails = ({ tutorial }) => {
                 </div>
                 {/* <i onClick={handleLike} className="fa-regular fa-heart"></i>
                 <i className="fa-solid fa-heart"></i> */}
-                <i onClick={() => likePost(tutorial._id)} className={`fa-regular fa-heart${liked ? ' liked' : ''}`}></i>
-                <i className={`fa-solid fa-heart${liked ? ' liked' : ''}`}></i>
+                <i onClick={() => handleLikeClick(tutorial._id)} className={liked ? 'fa-solid fa-heart' : 'fa-regular fa-heart'}></i>
+
                 <button onClick={handleClick}>Load Tutorial</button>
 
 

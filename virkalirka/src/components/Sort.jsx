@@ -50,7 +50,7 @@ const TutorialList = () => {
                                 <img  src={image} alt="of the project" className='content-img' />
                                 <h2 >{tutorial.title}</h2>
                                 <small className='difficulty' >{tutorial.difficulty}</small>
-                                <small className='postedBy' >{tutorial.postedBy}</small>
+                                {/* <small className='postedBy' >{tutorial.postedBy}</small> */}
                             </div>
                             </div>
                         );
