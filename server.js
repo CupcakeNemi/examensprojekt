@@ -18,11 +18,20 @@ app.use((req, res, next) => {
     // console.log(req.path, req.method);
     next();
 });
+const router = express.Router();
 
 
 app.use(cors());
 app.use('/api/tutorials', tutorialRoutes);
+app.use('/api/tutorial', tutorialRoutes);
+app.use('/tutorial', tutorialRoutes);
 app.use('/api/user', userRoutes);
+
+router.use((req, res, next) => {
+    const { tutorial } = req.params;
+    console.log(req.path,req.params,tutorial, "vägen")
+    next()
+    })
 
 // Connect to MongoDB database
 mongoose.connect(process.env.MONGODB_URI, {

@@ -14,7 +14,7 @@ const getTutorials = async (req, res) => {
 const saveTutorial = async (req, res) => {
     const {id} = req.params;
     const {user_id} = req.body;
-    console.log(req.body, "hallååå??")
+    // console.log(req.body, "hallååå??")
     console.log('Save Tutorial route reached');
     try {
         const tutorial = await Tutorial.findById(id);
@@ -46,7 +46,7 @@ const saveTutorial = async (req, res) => {
 // en tutorial
 const getTutorial = async (req, res) => {
     const { id } = req.params;
-
+    console.log(id, "hello?")
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({ error: "There is no such tutorial" })
     };

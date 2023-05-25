@@ -18,7 +18,11 @@ let upload = multer({ storage: storage, limits: { filesize: 300000 } });
 
 
 const router = express.Router();
-
+// router.use((req, res, next) => {
+//     const { tutorial } = req.params;
+//     console.log(req.path,req.params,tutorial, "vägen")
+//     next()
+//     })
 router.use(requireAuth);
 
 router.get('/', tutorialController.getTutorials);
@@ -28,8 +32,6 @@ router.get('/:id', tutorialController.getTutorial);
 router.get('/usertutorials', tutorialController.getUserTutorial);
 
 router.put('/:id/like', tutorialController.saveTutorial);
-
-router.get('/:id', tutorialController.getTutorial);
 
 router.post('/', upload.single('filename'), tutorialController.createTutorial);
 

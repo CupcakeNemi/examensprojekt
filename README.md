@@ -13,8 +13,8 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
 - En användare ska kunna 
     - Logga in X 
     - logga ut X
-    - lägga upp egna tutorials /
-    - gilla/spara tutorials 
+    - lägga upp egna tutorials X
+    - gilla/spara tutorials X
     - bläddra bland content svårighetsgrad /
 
 - extra
