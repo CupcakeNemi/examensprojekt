@@ -21,7 +21,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/userPage' element={<UserPage/>}/>
-        <Route path='/tutorial/:id' component={<TutorialPage/>} />
+        <Route path='/tutorial/:id' element={<TutorialPage/>} />
 
         {/* <Route path='/createTutorial' element={<createTutorial/>}/> */}
       </Routes>

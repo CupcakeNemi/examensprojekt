@@ -2,6 +2,8 @@ import { useTutorialContext } from '../hooks/useTutorialContext';
 import { useEffect, useState } from 'react';
 import URL from '../backendURL';
 import { useAuthContext } from '../hooks/useAuthContext';
+import { useNavigate } from 'react-router-dom';
+import TutorialPage from './TutorialPage';
 import { Link } from 'react-router-dom';
 
 const TutorialDetails = ({ tutorial }) => {
@@ -11,6 +13,7 @@ const TutorialDetails = ({ tutorial }) => {
     const image = `${URL}/static/${tutorial.filename}`;
     const [selectedTutorial, setSelectedTutorial] = useState(null);
     const _id = tutorial._id
+    const navigate = useNavigate();
 
     useEffect(() => {
         setLiked(tutorial.likes.includes(user.user._id))
@@ -20,13 +23,16 @@ const TutorialDetails = ({ tutorial }) => {
     const handleClick = async () => {
         try {
             const response = await fetch(`${URL}/api/tutorials/${tutorial._id}`, {
+                method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
             });
             const tutorialData = response.data;
             setSelectedTutorial(tutorialData);
+            
             console.log(tutorialData, "klick")
+            navigate(`/tutorial/${tutorial._id}`);
         } catch (error) {
             console.error(error);
         }
@@ -52,7 +58,7 @@ const TutorialDetails = ({ tutorial }) => {
 
     const handleLikeClick = async (tutorialId) => {
         await handleLike(tutorialId);
-
+        
         setLiked(!liked);
 
     };
@@ -63,7 +69,7 @@ const TutorialDetails = ({ tutorial }) => {
 
                 <img src={image} alt="of the project" className='content-img' />
                 <h2>{tutorial.title}</h2>
-                <Link to={`/tutorial/${tutorial._id}`}>View Tutorial</Link>
+                {/* <Link to={`/tutorial/${tutorial._id}`}>View Tutorial</Link> */}
                 <div>
                     <small className='difficulty'>{tutorial.difficulty}</small>
                 </div>

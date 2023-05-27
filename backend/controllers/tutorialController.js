@@ -48,7 +48,7 @@ const getTutorial = async (req, res) => {
     const { id } = req.params;
     console.log(id, "hello?")
     if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({ error: "There is no such tutorial" })
+        return res.status(404).json({ error: "Wrong: There is no such tutorial" })
     };
     const tutorial = await Tutorial.findById(id);
 

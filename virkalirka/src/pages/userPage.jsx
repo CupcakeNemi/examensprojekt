@@ -1,7 +1,6 @@
 import { useEffect, useState} from "react";
 import { useTutorialContext } from "../hooks/useTutorialContext";
 import '../index.css'
-
 import URL from "../backendURL";
 import UserPageCom from "../components/UserPageCom";
 import { useAuthContext } from "../hooks/useAuthContext";

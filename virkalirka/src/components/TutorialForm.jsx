@@ -78,7 +78,9 @@ const TutorialForm = () => {
         <div className="flexForm">
             <form className="addNew" onSubmit={handleSubmit}>
                 <h4>Add new tutorial</h4>
+                <label className="addFile">
                 <input type="file" id="file" name="file" onChange={(e) => setFile(e.target.files[0])} />
+                </label>
                 <input
                     type="text"
                     onChange={(e) => setTitle(e.target.value)}
@@ -119,7 +121,7 @@ const TutorialForm = () => {
                     </div>
                 ))}
 
-                <button className="btn" type="button" onClick={addStep}><i className="fa-solid fa-plus"></i></button>
+                <button className="newStep btn" type="button" onClick={addStep}><i className="fa-solid fa-plus"></i></button>
                 <button className="btn">Add Tutorial</button>
                 {error && <div className="error">{error}</div>}
             </form>
