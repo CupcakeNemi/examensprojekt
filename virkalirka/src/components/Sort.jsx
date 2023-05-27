@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import URL from '../backendURL';
 import { useAuthContext } from "../hooks/useAuthContext";
 import { useTutorialContext } from '../hooks/useTutorialContext';
@@ -11,14 +10,14 @@ const TutorialList = () => {
 
     useEffect(() => {
         if (selectedDifficulty) {
-
-            axios.get(`${URL}/api/tutorials`, {
+            fetch(`${URL}/api/tutorials`, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
             })
-                .then(response => {
-                    setTutorials(response.data);
+                .then(response => response.json())
+                .then(data => {
+                    setTutorials(data);
                 })
                 .catch(error => {
                     console.error(error);
@@ -46,12 +45,12 @@ const TutorialList = () => {
                     if (tutorial.difficulty === selectedDifficulty) {
                         return (
                             <div className='flexDiv'>
-                            <div className="tutorialDetails">
-                                <img  src={image} alt="of the project" className='content-img' />
-                                <h2 >{tutorial.title}</h2>
-                                <small className='difficulty' >{tutorial.difficulty}</small>
-                                {/* <small className='postedBy' >{tutorial.postedBy}</small> */}
-                            </div>
+                                <div className="tutorialDetails">
+                                    <img src={image} alt="of the project" className='content-img' />
+                                    <h2 >{tutorial.title}</h2>
+                                    <small className='difficulty' >{tutorial.difficulty}</small>
+                                    {/* <small className='postedBy' >{tutorial.postedBy}</small> */}
+                                </div>
                             </div>
                         );
                     } else {
