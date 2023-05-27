@@ -242,3 +242,17 @@ button {
   text-align: center;
   align-content: center;
 }
+
+.tutorial {
+  white-space: pre-line;
+  margin: 0 100px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.tutorial-img {
+  border-radius: 10px;
+  width: 200px;
+}

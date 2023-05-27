@@ -31,7 +31,7 @@ const TutorialDetails = ({ tutorial }) => {
             const tutorialData = response.data;
             setSelectedTutorial(tutorialData);
             
-            console.log(tutorialData, "klick")
+
             navigate(`/tutorial/${tutorial._id}`);
         } catch (error) {
             console.error(error);
