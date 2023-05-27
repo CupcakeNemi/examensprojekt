@@ -43,6 +43,17 @@ const saveTutorial = async (req, res) => {
     }
 };
 
+// User Page
+const getUserTutorial = async (req, res) => {
+    const tutorials = await Tutorial.find({ postedBy: req.user._id });
+    const { _id } = req.user;
+    if (!mongoose.Types.ObjectId.isValid(_id)) {
+        return res.status(404).json({ error: "GET: There is no such tutorial" })
+    };
+
+    res.status(200).json(tutorials);
+};
+
 // en tutorial
 const getTutorial = async (req, res) => {
     const { id } = req.params;
@@ -57,17 +68,6 @@ const getTutorial = async (req, res) => {
     };
 
     res.status(200).json(tutorial);
-};
-
-// User Page
-const getUserTutorial = async (req, res) => {
-    const tutorials = await Tutorial.find({ postedBy: req.user._id });
-    const { _id } = req.user;
-    if (!mongoose.Types.ObjectId.isValid(_id)) {
-        return res.status(404).json({ error: "GET: There is no such tutorial" })
-    };
-
-    res.status(200).json(tutorials);
 };
 
 // ny tutorial
