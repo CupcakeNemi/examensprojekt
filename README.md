@@ -50,5 +50,5 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  
  
  ## Video på appen 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=Xm1grRL9lKA)
+[![Watch the video](https://imgur.com/NCWg2wH)](https://www.youtube.com/watch?v=Xm1grRL9lKA)
  
