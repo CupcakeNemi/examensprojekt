@@ -24,11 +24,8 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
     - Registrera sig X
     - inte bläddra bland content X
 
-
 # Samarbeten: Om ni ska göra detta i grupp eller tillsammans med ett företag skriv det här och hur ni har tänkt samarbeta
  - Nope.
-
-
 
  # Installationer 
  - npm init
@@ -46,16 +43,10 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npm i cors
  - npm i axios
 
- # att göra
- - fixa sorting funktionen
- - fixa create så man kan skapa flera steps
- - fixa schema postedby efter username
- - fixa createtutorial route
- - fixa edit knapp
- -  göra så man kan gå in på posts för att se dom
-
-
 
 ## För att starta appen
  Skriv npm install på både rot nivå och i virkalirka appen, starta sedan båda 
  (root är backend, virkalirka är frontend)
+ 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=Xm1grRL9lKA)
+ 
