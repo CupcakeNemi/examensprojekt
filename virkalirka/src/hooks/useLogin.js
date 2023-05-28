@@ -7,7 +7,7 @@ export const useLogin = () => {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(null);
     const {dispatch} = useAuthContext()
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const login = async (username, password) => {
         setIsLoading(true);
@@ -29,8 +29,7 @@ export const useLogin = () => {
 
             dispatch({type: 'LOGIN', payload: json});
             setIsLoading(false);
-            history('/');
-            
+            navigate('/');
         }
     }
     return {login, isLoading, error,}

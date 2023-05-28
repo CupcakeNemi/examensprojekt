@@ -1,3 +1,15 @@
+.flexForm{
+    display: flex;
+    flex-direction: column
+}
+
+.addNew{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin:auto;
+}
+
 ul {
     border-radius: 10px 0 0 10px;
     padding: 20px 20px 20px 40px;
@@ -37,4 +49,8 @@ ul {
     background-color: #F8FAFD;
     border-style: none;
     margin: 5px;
+}
+
+.difficulty{
+    margin-right: 5px;
 }

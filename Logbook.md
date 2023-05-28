@@ -50,3 +50,34 @@ Fixade så efter man loggat in så redirectas man till home, tog lite tid innan 
 
 ## Onsdag 10/05-23
 Kämpat som tusan med linode men det är ett error efter det andra, ibland går det bra en stund men sen sitter man fast, så nu sitter jag fast igen, får se om anders kan hjälpa mig imorgon.
+
+## Torsdag 11/05-23
+Lyckades lösa linode, nu ska jag forsätta kämpa med att få till postedBy vilket är svårt för att jag inte la till det i början. 
+
+## Måndag 15/05-23
+Kämpade med postedBy sen bestämde jag mig för att byta ut allt från require till import, vilket skapade massa fel, men när jag hade lyckats lösa alla fel så kom jag mycket närmre i postedby, har lite fel nu att mina posts inte visas vilket jag inte förstår vart det kommer ifrån.
+
+## Tisdag 16/05-23
+* halvtids redovisning
+PostedBy finns nu i databasen, har fel med authorisation, att den tycker inte man är tillåten att se inlägg trots att det är ens egna (felet har med requireAuth.js)
+
+## Onsdag 17/05-23
+Löst authorisation felet, jag har börjat med Userpagen som också hade ett authorisation fel som jag nu löste, så nu är det att tutorial är undefined i userPageCom som jag inte lyckas hitta felet på.
+
+## Torsdag 18/05-23
+Löst problemet med userpage och nu är userpage uppe och man kan se sina egna och ta bort dom där. Lagt till difficulty i schema och fått ut det på sidan, nästa steg blir att fixa en sorterings funktion.
+
+## Fredag 19/05-23
+Fixade någon slags sort som jag får ändra sedan så den fungerar som jag vill
+
+## Söndag 21/05-23
+Försökte fixa så man kan gå in på en tutorial
+
+## Måndag 22/05-23
+Fastnade på likes 
+
+## Tisdag 23/05-23
+Kommit närmre i liksen, en konsoll log resultat visar null, vilket ska lösas på något sätt.
+
+## Onsdag 24/05-23
+Likes fungerar, gjort så man kan lägga till fler steps i en tutorial, nu håller jag på och försöka göra så man kan gå in på en tutorial

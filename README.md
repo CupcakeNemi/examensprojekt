@@ -11,16 +11,18 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
 
 # Kravspecifikation: I punktform skriv ner funktionaliterer som ska vara implementerade inom 6 veckor
 - En användare ska kunna 
-    - Logga in
-    - logga ut
-    - lägga upp egna tutorials
-    - gilla/spara tutorials
-    - bläddra bland content
-    - se videor
+    - Logga in X 
+    - logga ut X
+    - lägga upp egna tutorials X
+    - gilla/spara tutorials X
+    - bläddra bland content svårighetsgrad /
+
+- extra
+    - se videor *
 
 - En gäst ska kunna
-    - Registrera sig
-    - bläddra bland content
+    - Registrera sig X
+    - inte bläddra bland content X
 
 # Samarbeten: Om ni ska göra detta i grupp eller tillsammans med ett företag skriv det här och hur ni har tänkt samarbeta
  - Nope.
@@ -39,6 +41,7 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  - npm i multer
  - npm i body-parser
  - npm i cors
+ - npm i axios
 
 
 ## För att starta appen

@@ -18,19 +18,16 @@ h2 {
   font-family: "Julius Sans One", sans-serif;
   font-weight: 600;
   font-size: 24px;
-  margin-left: 24px;
 }
 
 h3 {
   font-weight: 500;
   font-size: 20px;
-  margin-left: 24px;
 }
 
 p {
   font-weight: 400;
   font-size: 16px;
-  margin-left: 24px;
 }
 
 .link {
@@ -106,6 +103,18 @@ h1 {
   color: #fff;
 }
 
+.flexForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.addNew {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: auto;
+}
+
 ul {
   border-radius: 10px 0 0 10px;
   padding: 20px 20px 20px 40px;
@@ -147,12 +156,28 @@ ul {
   margin: 5px;
 }
 
+.difficulty {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #FCFF7B;
+  border-style: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  margin: 5px 5px;
+}
+
 .btn {
   background-color: #FCFF7B;
   border-style: none;
   border-radius: 100px;
   width: 130px;
   padding: 10px;
+}
+
+.newStep {
+  width: 40px;
 }
 
 #logoutBtn {
@@ -175,6 +200,59 @@ ul {
   margin-left: 10px;
 }
 
+.addFile {
+  background-color: #FCFF7B;
+  border-style: none;
+  color: #1D232E;
+}
+
+#file-upload-button {
+  background-color: #FCFF7B;
+  height: 1000px;
+}
+
+.fa-solid.fa-heart {
+  display: hidden;
+  color: #1D232E;
+}
+
 .content-img {
-  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.tutorials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexDiv {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.tutorialDetails {
+  text-align: center;
+  align-content: center;
+}
+
+.tutorial {
+  white-space: pre-line;
+  margin: 0 100px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.tutorial-img {
+  border-radius: 10px;
+  width: 200px;
 }

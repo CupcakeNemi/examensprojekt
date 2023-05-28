@@ -1,6 +1,5 @@
-const mongoose = require ('mongoose');
-const Schema = mongoose.Schema;
-const { ObjectId } = require('mongodb');
+import mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 
 const tutorialSchema = new Schema({
     filename: {
@@ -12,17 +11,31 @@ const tutorialSchema = new Schema({
         required: true
     },
     stepsTitle: {
-        type: String,
+        type: [String],
         required: true
     },
     steps: {
-        type: String,
+        type: [String],
         required: true
     },
+    difficulty:
+    {
+        type: String,
+        enum: ['Easy', 'Medium', 'Hard'],
+        required: true
+    },
+    likes:[{
+        type: String,
+        default: [],
+    }],
     postedBy: {
         type: mongoose.Schema.ObjectId,
         ref: "user"
     }
 });
 
-module.exports = mongoose.model('Tutorial', tutorialSchema);
+
+const Tutorial = mongoose.model("Tutorial", tutorialSchema);
+
+// module.exports = mongoose.model('Tutorial', tutorialSchema);
+export default Tutorial;
