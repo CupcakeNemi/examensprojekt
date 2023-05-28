@@ -48,5 +48,7 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
  Skriv npm install på både rot nivå och i virkalirka appen, starta sedan båda 
  (root är backend, virkalirka är frontend)
  
+ 
+ ## Video på appen 
 [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=Xm1grRL9lKA)
  
