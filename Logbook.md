@@ -81,3 +81,15 @@ Kommit närmre i liksen, en konsoll log resultat visar null, vilket ska lösas p
 
 ## Onsdag 24/05-23
 Likes fungerar, gjort så man kan lägga till fler steps i en tutorial, nu håller jag på och försöka göra så man kan gå in på en tutorial
+
+## Torsdag 25/05-23 
+Försökte lösa ett fel jag hade med när ingenting visades när man försökte gå in på en tutorial. 
+
+## Fredag 26/05-23
+Fortsatte med att försöka lösa det
+
+## Lördag 27/05-23
+Lyckades lösa felet. vilket ledde till att jag hade fel i profilsidan också som jag lyckades lösa.
+
+## Söndag 28/05-23
+Spelade in video inför redovisningen

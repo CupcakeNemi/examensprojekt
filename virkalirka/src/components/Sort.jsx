@@ -27,7 +27,6 @@ const TutorialList = () => {
 
     const handleDifficultyClick = (difficulty) => {
         setSelectedDifficulty(difficulty);
-        console.log(difficulty, "svårt eller?")
 
     };
     const image = `${URL}/static/${tutorials.filename}`;
