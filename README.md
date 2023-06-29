@@ -5,7 +5,7 @@ Det ska vara en virkningsapp, det ska vara som en samlingsplats för mönster oc
 - Css
 - HTML
 - JS
-- önskan är att använda react så jag lär mig mer om det
+- react
 
 - Database: mongoDB
 
